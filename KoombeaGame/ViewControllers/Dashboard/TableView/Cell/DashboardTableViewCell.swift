@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol DashboardTableViewCellDelegate: class {
+    func DashboardTableViewCellDidSelect()
+}
+
 class DashboardTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -22,7 +26,6 @@ class DashboardTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
 }
@@ -33,7 +36,6 @@ extension DashboardTableViewCell: UICollectionViewDelegate, UICollectionViewData
         var flowLayout: UICollectionViewFlowLayout {
             let _flowLayout = UICollectionViewFlowLayout()
             
-            // edit properties here
             _flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width / 3.0, height: UIScreen.main.bounds.width / 3.0)
             _flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
             _flowLayout.scrollDirection = UICollectionViewScrollDirection.horizontal
@@ -43,7 +45,6 @@ extension DashboardTableViewCell: UICollectionViewDelegate, UICollectionViewData
             _flowLayout.sectionInset.left = 10
             _flowLayout.sectionInset.top = 10
             _flowLayout.sectionInset.bottom = 10
-            // edit properties here
             
             return _flowLayout
         }
@@ -68,5 +69,9 @@ extension DashboardTableViewCell: UICollectionViewDelegate, UICollectionViewData
         cell.config(name: self.brands[indexPath.row])
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
 }

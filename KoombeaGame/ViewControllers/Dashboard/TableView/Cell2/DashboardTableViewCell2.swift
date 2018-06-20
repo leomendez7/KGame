@@ -24,7 +24,6 @@ class DashboardTableViewCell2: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 }
 
@@ -34,7 +33,6 @@ extension DashboardTableViewCell2: UICollectionViewDelegate, UICollectionViewDat
         var flowLayout: UICollectionViewFlowLayout {
             let _flowLayout = UICollectionViewFlowLayout()
             
-            // edit properties here
             _flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width / 3.0, height: 195)
             _flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
             _flowLayout.scrollDirection = UICollectionViewScrollDirection.horizontal
@@ -44,7 +42,6 @@ extension DashboardTableViewCell2: UICollectionViewDelegate, UICollectionViewDat
             _flowLayout.sectionInset.left = 10
             _flowLayout.sectionInset.top = 0
             _flowLayout.sectionInset.bottom = 5
-            // edit properties here
             
             return _flowLayout
         }

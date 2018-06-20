@@ -28,7 +28,6 @@ class DashboardViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func setNavigationBar(){
@@ -143,8 +142,6 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         default:
             header.nameHeaderLabel.text = "\(headers[section]) (\(self.games.count))"
         }
-        
-        
         return header
     }
     

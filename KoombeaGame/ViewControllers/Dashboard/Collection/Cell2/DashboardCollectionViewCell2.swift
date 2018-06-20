@@ -15,18 +15,20 @@ class DashboardCollectionViewCell2: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
     
     func config(game: Game) {
         nameGameLabel.text = game.name
         gameImageView.layer.cornerRadius = 6
         
-        let urlImage = game.imageURL!
+        guard let urlImage = game.imageURL else {
+            return
+        }
         
-        let newUrl = urlImage.replacingOccurrences(of: "\\", with: "", options: .literal, range: nil)
+        let newUrl = urlImage.replacingOccurrences(of: "\\", with: "", options: .literal, range: nil) 
         
-        if urlImage != ""{
+        if urlImage != "" {
             guard let safeURL = newUrl.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else {
                 return
             }
