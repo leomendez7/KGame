@@ -8,12 +8,17 @@
 
 import UIKit
 
+protocol DashboardTableViewCell2Delegate: class {
+    func DashboardTableViewCell2DidSelect(game: Game)
+}
+
 class DashboardTableViewCell2: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
     var games: [Game] = []
     var count = 0
+    var delegate : DashboardTableViewCell2Delegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,7 +38,7 @@ extension DashboardTableViewCell2: UICollectionViewDelegate, UICollectionViewDat
         var flowLayout: UICollectionViewFlowLayout {
             let _flowLayout = UICollectionViewFlowLayout()
             
-            _flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width / 3.0, height: 195)
+            _flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width / 3.0, height: 202)
             _flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
             _flowLayout.scrollDirection = UICollectionViewScrollDirection.horizontal
             _flowLayout.minimumInteritemSpacing = 0.0
@@ -65,8 +70,10 @@ extension DashboardTableViewCell2: UICollectionViewDelegate, UICollectionViewDat
         if games.count != 0 {
           cell.config(game: games[indexPath.row])
         }
-        
-        
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.DashboardTableViewCell2DidSelect(game: games[indexPath.row])
     }
 }

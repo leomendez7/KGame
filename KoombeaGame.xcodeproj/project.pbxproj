@@ -15,6 +15,9 @@
 		4D9349EF20DA9C7A00484F5B /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9349ED20DA9C7A00484F5B /* DashboardTableViewCell.xib */; };
 		4D9349F320DA9C9800484F5B /* DashboardTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9349F120DA9C9800484F5B /* DashboardTableViewCell2.swift */; };
 		4D9349F420DA9C9800484F5B /* DashboardTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9349F220DA9C9800484F5B /* DashboardTableViewCell2.xib */; };
+		4D9349F820DAE38A00484F5B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9349F620DAE38A00484F5B /* DetailViewController.swift */; };
+		4D9349F920DAE38A00484F5B /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9349F720DAE38A00484F5B /* DetailViewController.xib */; };
+		4DA3900120DAF77400AD85F8 /* NSNumberFormatter+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3900020DAF77400AD85F8 /* NSNumberFormatter+Utils.swift */; };
 		AE5F89C8E9CDD10F152053A0 /* Pods_KoombeaGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC510561191E61D5B5F29F59 /* Pods_KoombeaGame.framework */; };
 		EC8D1B6420D9EE8500E1305A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1B6320D9EE8500E1305A /* AppDelegate.swift */; };
 		EC8D1B6620D9EE8500E1305A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1B6520D9EE8500E1305A /* ViewController.swift */; };
@@ -69,6 +72,9 @@
 		4D9349ED20DA9C7A00484F5B /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardTableViewCell.xib; sourceTree = "<group>"; };
 		4D9349F120DA9C9800484F5B /* DashboardTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell2.swift; sourceTree = "<group>"; };
 		4D9349F220DA9C9800484F5B /* DashboardTableViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardTableViewCell2.xib; sourceTree = "<group>"; };
+		4D9349F620DAE38A00484F5B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		4D9349F720DAE38A00484F5B /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		4DA3900020DAF77400AD85F8 /* NSNumberFormatter+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNumberFormatter+Utils.swift"; sourceTree = "<group>"; };
 		9194796A2F8037F673AA58F4 /* Pods-KoombeaGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaGameUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoombeaGameUITests/Pods-KoombeaGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C51F73C7E3F2CF9F9EB5D86 /* Pods-KoombeaGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaGameUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoombeaGameUITests/Pods-KoombeaGameUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A23D0649A36B5E4DA1673077 /* Pods_KoombeaGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoombeaGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +146,7 @@
 		4D9349E120DA894300484F5B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4DA3900020DAF77400AD85F8 /* NSNumberFormatter+Utils.swift */,
 				4D9349E220DA895B00484F5B /* ActivityIndicator.swift */,
 			);
 			path = Utilities;
@@ -189,6 +196,15 @@
 				4D9349F220DA9C9800484F5B /* DashboardTableViewCell2.xib */,
 			);
 			path = Cell2;
+			sourceTree = "<group>";
+		};
+		4D9349F520DAE36100484F5B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4D9349F620DAE38A00484F5B /* DetailViewController.swift */,
+				4D9349F720DAE38A00484F5B /* DetailViewController.xib */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		89E43C0B8A4755ADFFD84906 /* Frameworks */ = {
@@ -301,6 +317,7 @@
 		EC8D1B9920D9F0E700E1305A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4D9349F520DAE36100484F5B /* Detail */,
 				EC8D1BB520DA135500E1305A /* Dashboard */,
 				EC8D1B9B20D9F34000E1305A /* Walkthrough */,
 			);
@@ -490,6 +507,7 @@
 				EC8D1BAA20D9F39900E1305A /* Walkthrough3ViewController.xib in Resources */,
 				EC8D1BB920DA137800E1305A /* DashboardViewController.xib in Resources */,
 				EC8D1B7120D9EE8700E1305A /* LaunchScreen.storyboard in Resources */,
+				4D9349F920DAE38A00484F5B /* DetailViewController.xib in Resources */,
 				EC8D1B9620D9F09A00E1305A /* Default-568h@2x.png in Resources */,
 				EC8D1B6E20D9EE8700E1305A /* Assets.xcassets in Resources */,
 				4D9349EF20DA9C7A00484F5B /* DashboardTableViewCell.xib in Resources */,
@@ -614,6 +632,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC8D1B6620D9EE8500E1305A /* ViewController.swift in Sources */,
+				4D9349F820DAE38A00484F5B /* DetailViewController.swift in Sources */,
 				EC8D1BBE20DA198E00E1305A /* DashboardCollectionViewCell.swift in Sources */,
 				EC8D1B6420D9EE8500E1305A /* AppDelegate.swift in Sources */,
 				EC8D1BB020DA088F00E1305A /* Game.swift in Sources */,
@@ -628,6 +647,7 @@
 				4D9349E720DA92A900484F5B /* Header.swift in Sources */,
 				EC8D1BB220DA0F1E00E1305A /* DataService.swift in Sources */,
 				EC8D1BC220DA19A200E1305A /* DashboardCollectionViewCell2.swift in Sources */,
+				4DA3900120DAF77400AD85F8 /* NSNumberFormatter+Utils.swift in Sources */,
 				EC8D1BB420DA12B500E1305A /* Session.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

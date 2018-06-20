@@ -108,7 +108,7 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         }else{
             let cell:DashboardTableViewCell2 = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! DashboardTableViewCell2
-            
+            cell.delegate = self
             switch indexPath.section {
             case 1:
                 let new = games.sorted { $0.createdAt! < $1.createdAt! }
@@ -145,8 +145,13 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         return header
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        tableView.deselectRow(at: indexPath, animated: true)
-        
+}
+
+extension DashboardViewController: DashboardTableViewCell2Delegate {
+    
+    func DashboardTableViewCell2DidSelect(game: Game) {
+        let nextView = DetailViewController()
+        nextView.game = game
+        self.navigationController?.pushViewController(nextView, animated: true)
     }
 }

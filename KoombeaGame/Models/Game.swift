@@ -19,6 +19,8 @@ class Game: Object {
     @objc dynamic var imageURL : String?
     @objc dynamic var genre : String?
     var popular : Bool?
+    @objc dynamic var rating : String?
+    @objc dynamic var downloads : String?
     @objc dynamic var description_ : String?
     @objc dynamic var SKU : String?
     @objc dynamic var createdAt : String?
@@ -34,6 +36,8 @@ class Game: Object {
         game.imageURL = json["imageURL"].stringValue
         game.genre = json["genre"].stringValue
         game.popular = json["popular"].boolValue
+        game.rating = json["rating"].stringValue
+        game.downloads = json["downloads"].stringValue
         game.description_ = json["description"].stringValue
         game.SKU = json["SKU"].stringValue
         game.createdAt = json["createdAt"].stringValue

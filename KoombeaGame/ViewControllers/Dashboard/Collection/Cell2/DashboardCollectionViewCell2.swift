@@ -21,6 +21,8 @@ class DashboardCollectionViewCell2: UICollectionViewCell {
     func config(game: Game) {
         nameGameLabel.text = game.name
         gameImageView.layer.cornerRadius = 6
+        gameImageView.layer.borderWidth = 1
+        gameImageView.layer.borderColor = UIColor.lightGray.cgColor
         
         guard let urlImage = game.imageURL else {
             return
