@@ -34,7 +34,7 @@ class DataService {
             case .success:
                 if let value = response.result.value{
                     let json = JSON(value)
-                    
+                    print(json)
                     do {
                         let realm = try Realm()
                         try realm.write {

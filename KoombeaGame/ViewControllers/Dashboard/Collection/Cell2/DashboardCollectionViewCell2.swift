@@ -20,11 +20,14 @@ class DashboardCollectionViewCell2: UICollectionViewCell {
     
     func config(game: Game) {
         nameGameLabel.text = game.name
+        gameImageView.layer.cornerRadius = 6
         
-        let urlImage = game.imageURL
+        let urlImage = game.imageURL!
+        
+        let newUrl = urlImage.replacingOccurrences(of: "\\", with: "", options: .literal, range: nil)
         
         if urlImage != ""{
-            guard let safeURL = urlImage?.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else {
+            guard let safeURL = newUrl.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else {
                 return
             }
             guard let url = URL(string: safeURL) else {

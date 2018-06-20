@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		2B66CFB4BAE41615CE9C0D84 /* Pods_KoombeaGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23D0649A36B5E4DA1673077 /* Pods_KoombeaGameUITests.framework */; };
 		4D9349E320DA895B00484F5B /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9349E220DA895B00484F5B /* ActivityIndicator.swift */; };
+		4D9349E720DA92A900484F5B /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9349E520DA92A900484F5B /* Header.swift */; };
+		4D9349E820DA92A900484F5B /* Header.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9349E620DA92A900484F5B /* Header.xib */; };
+		4D9349EE20DA9C7A00484F5B /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9349EC20DA9C7A00484F5B /* DashboardTableViewCell.swift */; };
+		4D9349EF20DA9C7A00484F5B /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9349ED20DA9C7A00484F5B /* DashboardTableViewCell.xib */; };
+		4D9349F320DA9C9800484F5B /* DashboardTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9349F120DA9C9800484F5B /* DashboardTableViewCell2.swift */; };
+		4D9349F420DA9C9800484F5B /* DashboardTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9349F220DA9C9800484F5B /* DashboardTableViewCell2.xib */; };
 		AE5F89C8E9CDD10F152053A0 /* Pods_KoombeaGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC510561191E61D5B5F29F59 /* Pods_KoombeaGame.framework */; };
 		EC8D1B6420D9EE8500E1305A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1B6320D9EE8500E1305A /* AppDelegate.swift */; };
 		EC8D1B6620D9EE8500E1305A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1B6520D9EE8500E1305A /* ViewController.swift */; };
@@ -57,6 +63,12 @@
 /* Begin PBXFileReference section */
 		3F1FBBA2DA47FED3ABFB835A /* Pods-KoombeaGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoombeaGame/Pods-KoombeaGame.release.xcconfig"; sourceTree = "<group>"; };
 		4D9349E220DA895B00484F5B /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		4D9349E520DA92A900484F5B /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		4D9349E620DA92A900484F5B /* Header.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Header.xib; sourceTree = "<group>"; };
+		4D9349EC20DA9C7A00484F5B /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
+		4D9349ED20DA9C7A00484F5B /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardTableViewCell.xib; sourceTree = "<group>"; };
+		4D9349F120DA9C9800484F5B /* DashboardTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell2.swift; sourceTree = "<group>"; };
+		4D9349F220DA9C9800484F5B /* DashboardTableViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardTableViewCell2.xib; sourceTree = "<group>"; };
 		9194796A2F8037F673AA58F4 /* Pods-KoombeaGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaGameUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoombeaGameUITests/Pods-KoombeaGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C51F73C7E3F2CF9F9EB5D86 /* Pods-KoombeaGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaGameUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoombeaGameUITests/Pods-KoombeaGameUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A23D0649A36B5E4DA1673077 /* Pods_KoombeaGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoombeaGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +143,52 @@
 				4D9349E220DA895B00484F5B /* ActivityIndicator.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4D9349E420DA927A00484F5B /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				4D9349E520DA92A900484F5B /* Header.swift */,
+				4D9349E620DA92A900484F5B /* Header.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		4D9349E920DA9C1400484F5B /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D1BBB20DA197600E1305A /* Cell2 */,
+				EC8D1BBA20DA196A00E1305A /* Cell */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		4D9349EA20DA9C2600484F5B /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				4D9349E420DA927A00484F5B /* Header */,
+				4D9349F020DA9C8300484F5B /* Cell2 */,
+				4D9349EB20DA9C5900484F5B /* Cell */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		4D9349EB20DA9C5900484F5B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4D9349EC20DA9C7A00484F5B /* DashboardTableViewCell.swift */,
+				4D9349ED20DA9C7A00484F5B /* DashboardTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4D9349F020DA9C8300484F5B /* Cell2 */ = {
+			isa = PBXGroup;
+			children = (
+				4D9349F120DA9C9800484F5B /* DashboardTableViewCell2.swift */,
+				4D9349F220DA9C9800484F5B /* DashboardTableViewCell2.xib */,
+			);
+			path = Cell2;
 			sourceTree = "<group>";
 		};
 		89E43C0B8A4755ADFFD84906 /* Frameworks */ = {
@@ -289,8 +347,8 @@
 		EC8D1BB520DA135500E1305A /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				EC8D1BBB20DA197600E1305A /* Cell2 */,
-				EC8D1BBA20DA196A00E1305A /* Cell */,
+				4D9349E920DA9C1400484F5B /* Collection */,
+				4D9349EA20DA9C2600484F5B /* TableView */,
 				EC8D1BB620DA137800E1305A /* DashboardViewController.swift */,
 				EC8D1BB720DA137800E1305A /* DashboardViewController.xib */,
 			);
@@ -427,11 +485,14 @@
 				EC8D1BA520D9F38300E1305A /* Walkthrough2ViewController.xib in Resources */,
 				EC8D1BC320DA19A200E1305A /* DashboardCollectionViewCell2.xib in Resources */,
 				EC8D1BBF20DA198E00E1305A /* DashboardCollectionViewCell.xib in Resources */,
+				4D9349E820DA92A900484F5B /* Header.xib in Resources */,
+				4D9349F420DA9C9800484F5B /* DashboardTableViewCell2.xib in Resources */,
 				EC8D1BAA20D9F39900E1305A /* Walkthrough3ViewController.xib in Resources */,
 				EC8D1BB920DA137800E1305A /* DashboardViewController.xib in Resources */,
 				EC8D1B7120D9EE8700E1305A /* LaunchScreen.storyboard in Resources */,
 				EC8D1B9620D9F09A00E1305A /* Default-568h@2x.png in Resources */,
 				EC8D1B6E20D9EE8700E1305A /* Assets.xcassets in Resources */,
+				4D9349EF20DA9C7A00484F5B /* DashboardTableViewCell.xib in Resources */,
 				EC8D1B6920D9EE8500E1305A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,11 +618,14 @@
 				EC8D1B6420D9EE8500E1305A /* AppDelegate.swift in Sources */,
 				EC8D1BB020DA088F00E1305A /* Game.swift in Sources */,
 				4D9349E320DA895B00484F5B /* ActivityIndicator.swift in Sources */,
+				4D9349F320DA9C9800484F5B /* DashboardTableViewCell2.swift in Sources */,
 				EC8D1BAD20D9F3CC00E1305A /* Walkthrough1ViewController.swift in Sources */,
 				EC8D1BA420D9F38300E1305A /* Walkthrough2ViewController.swift in Sources */,
 				EC8D1BA920D9F39900E1305A /* Walkthrough3ViewController.swift in Sources */,
 				EC8D1B6C20D9EE8500E1305A /* KoombeaGame.xcdatamodeld in Sources */,
+				4D9349EE20DA9C7A00484F5B /* DashboardTableViewCell.swift in Sources */,
 				EC8D1BB820DA137800E1305A /* DashboardViewController.swift in Sources */,
+				4D9349E720DA92A900484F5B /* Header.swift in Sources */,
 				EC8D1BB220DA0F1E00E1305A /* DataService.swift in Sources */,
 				EC8D1BC220DA19A200E1305A /* DashboardCollectionViewCell2.swift in Sources */,
 				EC8D1BB420DA12B500E1305A /* Session.swift in Sources */,
