@@ -1,0 +1,59 @@
+PODS:
+  - Alamofire (4.7.2)
+  - AlamofireImage (3.3.1):
+    - Alamofire (~> 4.5)
+  - Device (3.0.3)
+  - DropDown (2.3.2)
+  - InteractiveSideMenu (2.3)
+  - IQKeyboardManagerSwift (6.0.2)
+  - Realm (3.4.0):
+    - Realm/Headers (= 3.4.0)
+  - Realm/Headers (3.4.0)
+  - RealmSwift (3.4.0):
+    - Realm (= 3.4.0)
+  - SwiftyJSON (4.1.0)
+  - "UIAlertController+Blocks (0.9.2)"
+  - UIColor_Hex_Swift (4.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - Device (~> 3.0.3)
+  - DropDown
+  - InteractiveSideMenu
+  - IQKeyboardManagerSwift
+  - RealmSwift
+  - SwiftyJSON
+  - "UIAlertController+Blocks"
+  - UIColor_Hex_Swift (~> 4.0.1)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - AlamofireImage
+    - Device
+    - DropDown
+    - InteractiveSideMenu
+    - IQKeyboardManagerSwift
+    - Realm
+    - RealmSwift
+    - SwiftyJSON
+    - "UIAlertController+Blocks"
+    - UIColor_Hex_Swift
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
+  Device: 9a5264ee4e0f392e7153d2c46b10c8df46b7aad2
+  DropDown: 7f87abecc28f9b4edad810fe1211c5c018c257e5
+  InteractiveSideMenu: d503a508c6d62a4d5d4372d9fb9e1795637a8e45
+  IQKeyboardManagerSwift: 59d4b0e140bc546c3c76ae5bb35b3dafd10b8172
+  Realm: 9527c7baa2260f3a3aad6823d2d71cafff9b046b
+  RealmSwift: f40a747beaea1cadde7dcef41ee5a34b3001677b
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  "UIAlertController+Blocks": 80e28b92523fb58aba4d1bccec013d5a0b0bddb2
+  UIColor_Hex_Swift: c5ff88470499383b8fd85302d59344bb24ba9436
+
+PODFILE CHECKSUM: 89411decc6ae256d9ec5a5f5162e4c5be448b44b
+
+COCOAPODS: 1.5.0

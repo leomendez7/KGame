@@ -1,0 +1,915 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B66CFB4BAE41615CE9C0D84 /* Pods_KoombeaGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23D0649A36B5E4DA1673077 /* Pods_KoombeaGameUITests.framework */; };
+		4D9349E320DA895B00484F5B /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9349E220DA895B00484F5B /* ActivityIndicator.swift */; };
+		AE5F89C8E9CDD10F152053A0 /* Pods_KoombeaGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC510561191E61D5B5F29F59 /* Pods_KoombeaGame.framework */; };
+		EC8D1B6420D9EE8500E1305A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1B6320D9EE8500E1305A /* AppDelegate.swift */; };
+		EC8D1B6620D9EE8500E1305A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1B6520D9EE8500E1305A /* ViewController.swift */; };
+		EC8D1B6920D9EE8500E1305A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC8D1B6720D9EE8500E1305A /* Main.storyboard */; };
+		EC8D1B6C20D9EE8500E1305A /* KoombeaGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1B6A20D9EE8500E1305A /* KoombeaGame.xcdatamodeld */; };
+		EC8D1B6E20D9EE8700E1305A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC8D1B6D20D9EE8700E1305A /* Assets.xcassets */; };
+		EC8D1B7120D9EE8700E1305A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC8D1B6F20D9EE8700E1305A /* LaunchScreen.storyboard */; };
+		EC8D1B7C20D9EE8700E1305A /* KoombeaGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1B7B20D9EE8700E1305A /* KoombeaGameTests.swift */; };
+		EC8D1B8720D9EE8700E1305A /* KoombeaGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1B8620D9EE8700E1305A /* KoombeaGameUITests.swift */; };
+		EC8D1B9620D9F09A00E1305A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8D1B9520D9F09900E1305A /* Default-568h@2x.png */; };
+		EC8D1BA420D9F38300E1305A /* Walkthrough2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1BA220D9F38300E1305A /* Walkthrough2ViewController.swift */; };
+		EC8D1BA520D9F38300E1305A /* Walkthrough2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC8D1BA320D9F38300E1305A /* Walkthrough2ViewController.xib */; };
+		EC8D1BA920D9F39900E1305A /* Walkthrough3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1BA720D9F39900E1305A /* Walkthrough3ViewController.swift */; };
+		EC8D1BAA20D9F39900E1305A /* Walkthrough3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC8D1BA820D9F39900E1305A /* Walkthrough3ViewController.xib */; };
+		EC8D1BAD20D9F3CC00E1305A /* Walkthrough1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1BAB20D9F3CC00E1305A /* Walkthrough1ViewController.swift */; };
+		EC8D1BAE20D9F3CC00E1305A /* Walkthrough1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC8D1BAC20D9F3CC00E1305A /* Walkthrough1ViewController.xib */; };
+		EC8D1BB020DA088F00E1305A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1BAF20DA088F00E1305A /* Game.swift */; };
+		EC8D1BB220DA0F1E00E1305A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1BB120DA0F1E00E1305A /* DataService.swift */; };
+		EC8D1BB420DA12B500E1305A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1BB320DA12B500E1305A /* Session.swift */; };
+		EC8D1BB820DA137800E1305A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1BB620DA137800E1305A /* DashboardViewController.swift */; };
+		EC8D1BB920DA137800E1305A /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC8D1BB720DA137800E1305A /* DashboardViewController.xib */; };
+		EC8D1BBE20DA198E00E1305A /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1BBC20DA198E00E1305A /* DashboardCollectionViewCell.swift */; };
+		EC8D1BBF20DA198E00E1305A /* DashboardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC8D1BBD20DA198E00E1305A /* DashboardCollectionViewCell.xib */; };
+		EC8D1BC220DA19A200E1305A /* DashboardCollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1BC020DA19A200E1305A /* DashboardCollectionViewCell2.swift */; };
+		EC8D1BC320DA19A200E1305A /* DashboardCollectionViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC8D1BC120DA19A200E1305A /* DashboardCollectionViewCell2.xib */; };
+		F104F4E7FDFCFC8F24DA0347 /* Pods_KoombeaGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0CC74F81D9FD63E0AEBBFFF /* Pods_KoombeaGameTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC8D1B7820D9EE8700E1305A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC8D1B5820D9EE8500E1305A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC8D1B5F20D9EE8500E1305A;
+			remoteInfo = KoombeaGame;
+		};
+		EC8D1B8320D9EE8700E1305A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC8D1B5820D9EE8500E1305A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC8D1B5F20D9EE8500E1305A;
+			remoteInfo = KoombeaGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F1FBBA2DA47FED3ABFB835A /* Pods-KoombeaGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoombeaGame/Pods-KoombeaGame.release.xcconfig"; sourceTree = "<group>"; };
+		4D9349E220DA895B00484F5B /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		9194796A2F8037F673AA58F4 /* Pods-KoombeaGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaGameUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoombeaGameUITests/Pods-KoombeaGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9C51F73C7E3F2CF9F9EB5D86 /* Pods-KoombeaGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaGameUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoombeaGameUITests/Pods-KoombeaGameUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A23D0649A36B5E4DA1673077 /* Pods_KoombeaGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoombeaGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACE09D86352ACFA187520EE8 /* Pods-KoombeaGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaGameTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoombeaGameTests/Pods-KoombeaGameTests.release.xcconfig"; sourceTree = "<group>"; };
+		B0CC74F81D9FD63E0AEBBFFF /* Pods_KoombeaGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoombeaGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC510561191E61D5B5F29F59 /* Pods_KoombeaGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoombeaGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF63FA0A5B6758B52BA239E7 /* Pods-KoombeaGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoombeaGame/Pods-KoombeaGame.debug.xcconfig"; sourceTree = "<group>"; };
+		D51928B015644190743EA6E9 /* Pods-KoombeaGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaGameTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoombeaGameTests/Pods-KoombeaGameTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EC8D1B6020D9EE8500E1305A /* KoombeaGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoombeaGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC8D1B6320D9EE8500E1305A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC8D1B6520D9EE8500E1305A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC8D1B6820D9EE8500E1305A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC8D1B6B20D9EE8500E1305A /* KoombeaGame.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KoombeaGame.xcdatamodel; sourceTree = "<group>"; };
+		EC8D1B6D20D9EE8700E1305A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC8D1B7020D9EE8700E1305A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC8D1B7220D9EE8700E1305A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC8D1B7720D9EE8700E1305A /* KoombeaGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KoombeaGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC8D1B7B20D9EE8700E1305A /* KoombeaGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoombeaGameTests.swift; sourceTree = "<group>"; };
+		EC8D1B7D20D9EE8700E1305A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC8D1B8220D9EE8700E1305A /* KoombeaGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KoombeaGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC8D1B8620D9EE8700E1305A /* KoombeaGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoombeaGameUITests.swift; sourceTree = "<group>"; };
+		EC8D1B8820D9EE8700E1305A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC8D1B9520D9F09900E1305A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		EC8D1BA220D9F38300E1305A /* Walkthrough2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walkthrough2ViewController.swift; sourceTree = "<group>"; };
+		EC8D1BA320D9F38300E1305A /* Walkthrough2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Walkthrough2ViewController.xib; sourceTree = "<group>"; };
+		EC8D1BA720D9F39900E1305A /* Walkthrough3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walkthrough3ViewController.swift; sourceTree = "<group>"; };
+		EC8D1BA820D9F39900E1305A /* Walkthrough3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Walkthrough3ViewController.xib; sourceTree = "<group>"; };
+		EC8D1BAB20D9F3CC00E1305A /* Walkthrough1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walkthrough1ViewController.swift; sourceTree = "<group>"; };
+		EC8D1BAC20D9F3CC00E1305A /* Walkthrough1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Walkthrough1ViewController.xib; sourceTree = "<group>"; };
+		EC8D1BAF20DA088F00E1305A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		EC8D1BB120DA0F1E00E1305A /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		EC8D1BB320DA12B500E1305A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		EC8D1BB620DA137800E1305A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		EC8D1BB720DA137800E1305A /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
+		EC8D1BBC20DA198E00E1305A /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
+		EC8D1BBD20DA198E00E1305A /* DashboardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardCollectionViewCell.xib; sourceTree = "<group>"; };
+		EC8D1BC020DA19A200E1305A /* DashboardCollectionViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell2.swift; sourceTree = "<group>"; };
+		EC8D1BC120DA19A200E1305A /* DashboardCollectionViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardCollectionViewCell2.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC8D1B5D20D9EE8500E1305A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE5F89C8E9CDD10F152053A0 /* Pods_KoombeaGame.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC8D1B7420D9EE8700E1305A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F104F4E7FDFCFC8F24DA0347 /* Pods_KoombeaGameTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC8D1B7F20D9EE8700E1305A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B66CFB4BAE41615CE9C0D84 /* Pods_KoombeaGameUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D9349E120DA894300484F5B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4D9349E220DA895B00484F5B /* ActivityIndicator.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		89E43C0B8A4755ADFFD84906 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC510561191E61D5B5F29F59 /* Pods_KoombeaGame.framework */,
+				B0CC74F81D9FD63E0AEBBFFF /* Pods_KoombeaGameTests.framework */,
+				A23D0649A36B5E4DA1673077 /* Pods_KoombeaGameUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF443E8EDF3742EB8D2EE79F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF63FA0A5B6758B52BA239E7 /* Pods-KoombeaGame.debug.xcconfig */,
+				3F1FBBA2DA47FED3ABFB835A /* Pods-KoombeaGame.release.xcconfig */,
+				D51928B015644190743EA6E9 /* Pods-KoombeaGameTests.debug.xcconfig */,
+				ACE09D86352ACFA187520EE8 /* Pods-KoombeaGameTests.release.xcconfig */,
+				9194796A2F8037F673AA58F4 /* Pods-KoombeaGameUITests.debug.xcconfig */,
+				9C51F73C7E3F2CF9F9EB5D86 /* Pods-KoombeaGameUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC8D1B5720D9EE8500E1305A = {
+			isa = PBXGroup;
+			children = (
+				EC8D1B6220D9EE8500E1305A /* KoombeaGame */,
+				EC8D1B7A20D9EE8700E1305A /* KoombeaGameTests */,
+				EC8D1B8520D9EE8700E1305A /* KoombeaGameUITests */,
+				EC8D1B6120D9EE8500E1305A /* Products */,
+				AF443E8EDF3742EB8D2EE79F /* Pods */,
+				89E43C0B8A4755ADFFD84906 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EC8D1B6120D9EE8500E1305A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D1B6020D9EE8500E1305A /* KoombeaGame.app */,
+				EC8D1B7720D9EE8700E1305A /* KoombeaGameTests.xctest */,
+				EC8D1B8220D9EE8700E1305A /* KoombeaGameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC8D1B6220D9EE8500E1305A /* KoombeaGame */ = {
+			isa = PBXGroup;
+			children = (
+				4D9349E120DA894300484F5B /* Utilities */,
+				EC8D1B9420D9F07C00E1305A /* Resources */,
+				EC8D1B9820D9F0CF00E1305A /* Base */,
+				EC8D1B9720D9F0B900E1305A /* Models */,
+				EC8D1B9920D9F0E700E1305A /* ViewControllers */,
+				EC8D1B6520D9EE8500E1305A /* ViewController.swift */,
+				EC8D1B7220D9EE8700E1305A /* Info.plist */,
+				EC8D1B6A20D9EE8500E1305A /* KoombeaGame.xcdatamodeld */,
+			);
+			path = KoombeaGame;
+			sourceTree = "<group>";
+		};
+		EC8D1B7A20D9EE8700E1305A /* KoombeaGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D1B7B20D9EE8700E1305A /* KoombeaGameTests.swift */,
+				EC8D1B7D20D9EE8700E1305A /* Info.plist */,
+			);
+			path = KoombeaGameTests;
+			sourceTree = "<group>";
+		};
+		EC8D1B8520D9EE8700E1305A /* KoombeaGameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D1B8620D9EE8700E1305A /* KoombeaGameUITests.swift */,
+				EC8D1B8820D9EE8700E1305A /* Info.plist */,
+			);
+			path = KoombeaGameUITests;
+			sourceTree = "<group>";
+		};
+		EC8D1B9420D9F07C00E1305A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D1B9520D9F09900E1305A /* Default-568h@2x.png */,
+				EC8D1B6720D9EE8500E1305A /* Main.storyboard */,
+				EC8D1B6D20D9EE8700E1305A /* Assets.xcassets */,
+				EC8D1B6F20D9EE8700E1305A /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EC8D1B9720D9F0B900E1305A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D1BAF20DA088F00E1305A /* Game.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EC8D1B9820D9F0CF00E1305A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D1B6320D9EE8500E1305A /* AppDelegate.swift */,
+				EC8D1BB120DA0F1E00E1305A /* DataService.swift */,
+				EC8D1BB320DA12B500E1305A /* Session.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EC8D1B9920D9F0E700E1305A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D1BB520DA135500E1305A /* Dashboard */,
+				EC8D1B9B20D9F34000E1305A /* Walkthrough */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EC8D1B9B20D9F34000E1305A /* Walkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D1BA620D9F38800E1305A /* Walkthrough3 */,
+				EC8D1BA120D9F36F00E1305A /* Walkthrough2 */,
+				EC8D1B9C20D9F34900E1305A /* Walkthrough1 */,
+			);
+			path = Walkthrough;
+			sourceTree = "<group>";
+		};
+		EC8D1B9C20D9F34900E1305A /* Walkthrough1 */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D1BAB20D9F3CC00E1305A /* Walkthrough1ViewController.swift */,
+				EC8D1BAC20D9F3CC00E1305A /* Walkthrough1ViewController.xib */,
+			);
+			path = Walkthrough1;
+			sourceTree = "<group>";
+		};
+		EC8D1BA120D9F36F00E1305A /* Walkthrough2 */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D1BA220D9F38300E1305A /* Walkthrough2ViewController.swift */,
+				EC8D1BA320D9F38300E1305A /* Walkthrough2ViewController.xib */,
+			);
+			path = Walkthrough2;
+			sourceTree = "<group>";
+		};
+		EC8D1BA620D9F38800E1305A /* Walkthrough3 */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D1BA720D9F39900E1305A /* Walkthrough3ViewController.swift */,
+				EC8D1BA820D9F39900E1305A /* Walkthrough3ViewController.xib */,
+			);
+			path = Walkthrough3;
+			sourceTree = "<group>";
+		};
+		EC8D1BB520DA135500E1305A /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D1BBB20DA197600E1305A /* Cell2 */,
+				EC8D1BBA20DA196A00E1305A /* Cell */,
+				EC8D1BB620DA137800E1305A /* DashboardViewController.swift */,
+				EC8D1BB720DA137800E1305A /* DashboardViewController.xib */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		EC8D1BBA20DA196A00E1305A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D1BBC20DA198E00E1305A /* DashboardCollectionViewCell.swift */,
+				EC8D1BBD20DA198E00E1305A /* DashboardCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EC8D1BBB20DA197600E1305A /* Cell2 */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D1BC020DA19A200E1305A /* DashboardCollectionViewCell2.swift */,
+				EC8D1BC120DA19A200E1305A /* DashboardCollectionViewCell2.xib */,
+			);
+			path = Cell2;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC8D1B5F20D9EE8500E1305A /* KoombeaGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC8D1B8B20D9EE8700E1305A /* Build configuration list for PBXNativeTarget "KoombeaGame" */;
+			buildPhases = (
+				D2F83F20AA876E0257777231 /* [CP] Check Pods Manifest.lock */,
+				EC8D1B5C20D9EE8500E1305A /* Sources */,
+				EC8D1B5D20D9EE8500E1305A /* Frameworks */,
+				EC8D1B5E20D9EE8500E1305A /* Resources */,
+				8BD27038A4AE8710C98BF8F8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KoombeaGame;
+			productName = KoombeaGame;
+			productReference = EC8D1B6020D9EE8500E1305A /* KoombeaGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC8D1B7620D9EE8700E1305A /* KoombeaGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC8D1B8E20D9EE8700E1305A /* Build configuration list for PBXNativeTarget "KoombeaGameTests" */;
+			buildPhases = (
+				F359D9FA595BDE339F294D30 /* [CP] Check Pods Manifest.lock */,
+				EC8D1B7320D9EE8700E1305A /* Sources */,
+				EC8D1B7420D9EE8700E1305A /* Frameworks */,
+				EC8D1B7520D9EE8700E1305A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC8D1B7920D9EE8700E1305A /* PBXTargetDependency */,
+			);
+			name = KoombeaGameTests;
+			productName = KoombeaGameTests;
+			productReference = EC8D1B7720D9EE8700E1305A /* KoombeaGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EC8D1B8120D9EE8700E1305A /* KoombeaGameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC8D1B9120D9EE8700E1305A /* Build configuration list for PBXNativeTarget "KoombeaGameUITests" */;
+			buildPhases = (
+				C7931B1C4150A933AA8EE857 /* [CP] Check Pods Manifest.lock */,
+				EC8D1B7E20D9EE8700E1305A /* Sources */,
+				EC8D1B7F20D9EE8700E1305A /* Frameworks */,
+				EC8D1B8020D9EE8700E1305A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC8D1B8420D9EE8700E1305A /* PBXTargetDependency */,
+			);
+			name = KoombeaGameUITests;
+			productName = KoombeaGameUITests;
+			productReference = EC8D1B8220D9EE8700E1305A /* KoombeaGameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC8D1B5820D9EE8500E1305A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Leonardo Mendez";
+				TargetAttributes = {
+					EC8D1B5F20D9EE8500E1305A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					EC8D1B7620D9EE8700E1305A = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = EC8D1B5F20D9EE8500E1305A;
+					};
+					EC8D1B8120D9EE8700E1305A = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = EC8D1B5F20D9EE8500E1305A;
+					};
+				};
+			};
+			buildConfigurationList = EC8D1B5B20D9EE8500E1305A /* Build configuration list for PBXProject "KoombeaGame" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC8D1B5720D9EE8500E1305A;
+			productRefGroup = EC8D1B6120D9EE8500E1305A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC8D1B5F20D9EE8500E1305A /* KoombeaGame */,
+				EC8D1B7620D9EE8700E1305A /* KoombeaGameTests */,
+				EC8D1B8120D9EE8700E1305A /* KoombeaGameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC8D1B5E20D9EE8500E1305A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC8D1BAE20D9F3CC00E1305A /* Walkthrough1ViewController.xib in Resources */,
+				EC8D1BA520D9F38300E1305A /* Walkthrough2ViewController.xib in Resources */,
+				EC8D1BC320DA19A200E1305A /* DashboardCollectionViewCell2.xib in Resources */,
+				EC8D1BBF20DA198E00E1305A /* DashboardCollectionViewCell.xib in Resources */,
+				EC8D1BAA20D9F39900E1305A /* Walkthrough3ViewController.xib in Resources */,
+				EC8D1BB920DA137800E1305A /* DashboardViewController.xib in Resources */,
+				EC8D1B7120D9EE8700E1305A /* LaunchScreen.storyboard in Resources */,
+				EC8D1B9620D9F09A00E1305A /* Default-568h@2x.png in Resources */,
+				EC8D1B6E20D9EE8700E1305A /* Assets.xcassets in Resources */,
+				EC8D1B6920D9EE8500E1305A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC8D1B7520D9EE8700E1305A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC8D1B8020D9EE8700E1305A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8BD27038A4AE8710C98BF8F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KoombeaGame/Pods-KoombeaGame-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/InteractiveSideMenu/InteractiveSideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/UIAlertController+Blocks/UIAlertController_Blocks.framework",
+				"${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InteractiveSideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIAlertController_Blocks.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex_Swift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KoombeaGame/Pods-KoombeaGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7931B1C4150A933AA8EE857 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KoombeaGameUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2F83F20AA876E0257777231 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KoombeaGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F359D9FA595BDE339F294D30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KoombeaGameTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC8D1B5C20D9EE8500E1305A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC8D1B6620D9EE8500E1305A /* ViewController.swift in Sources */,
+				EC8D1BBE20DA198E00E1305A /* DashboardCollectionViewCell.swift in Sources */,
+				EC8D1B6420D9EE8500E1305A /* AppDelegate.swift in Sources */,
+				EC8D1BB020DA088F00E1305A /* Game.swift in Sources */,
+				4D9349E320DA895B00484F5B /* ActivityIndicator.swift in Sources */,
+				EC8D1BAD20D9F3CC00E1305A /* Walkthrough1ViewController.swift in Sources */,
+				EC8D1BA420D9F38300E1305A /* Walkthrough2ViewController.swift in Sources */,
+				EC8D1BA920D9F39900E1305A /* Walkthrough3ViewController.swift in Sources */,
+				EC8D1B6C20D9EE8500E1305A /* KoombeaGame.xcdatamodeld in Sources */,
+				EC8D1BB820DA137800E1305A /* DashboardViewController.swift in Sources */,
+				EC8D1BB220DA0F1E00E1305A /* DataService.swift in Sources */,
+				EC8D1BC220DA19A200E1305A /* DashboardCollectionViewCell2.swift in Sources */,
+				EC8D1BB420DA12B500E1305A /* Session.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC8D1B7320D9EE8700E1305A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC8D1B7C20D9EE8700E1305A /* KoombeaGameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC8D1B7E20D9EE8700E1305A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC8D1B8720D9EE8700E1305A /* KoombeaGameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC8D1B7920D9EE8700E1305A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC8D1B5F20D9EE8500E1305A /* KoombeaGame */;
+			targetProxy = EC8D1B7820D9EE8700E1305A /* PBXContainerItemProxy */;
+		};
+		EC8D1B8420D9EE8700E1305A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC8D1B5F20D9EE8500E1305A /* KoombeaGame */;
+			targetProxy = EC8D1B8320D9EE8700E1305A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC8D1B6720D9EE8500E1305A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC8D1B6820D9EE8500E1305A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC8D1B6F20D9EE8700E1305A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC8D1B7020D9EE8700E1305A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC8D1B8920D9EE8700E1305A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC8D1B8A20D9EE8700E1305A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC8D1B8C20D9EE8700E1305A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF63FA0A5B6758B52BA239E7 /* Pods-KoombeaGame.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6C8T355C66;
+				INFOPLIST_FILE = KoombeaGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.KoombeaGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC8D1B8D20D9EE8700E1305A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F1FBBA2DA47FED3ABFB835A /* Pods-KoombeaGame.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6C8T355C66;
+				INFOPLIST_FILE = KoombeaGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.KoombeaGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC8D1B8F20D9EE8700E1305A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D51928B015644190743EA6E9 /* Pods-KoombeaGameTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6C8T355C66;
+				INFOPLIST_FILE = KoombeaGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.KoombeaGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KoombeaGame.app/KoombeaGame";
+			};
+			name = Debug;
+		};
+		EC8D1B9020D9EE8700E1305A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACE09D86352ACFA187520EE8 /* Pods-KoombeaGameTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6C8T355C66;
+				INFOPLIST_FILE = KoombeaGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.KoombeaGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KoombeaGame.app/KoombeaGame";
+			};
+			name = Release;
+		};
+		EC8D1B9220D9EE8700E1305A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9194796A2F8037F673AA58F4 /* Pods-KoombeaGameUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6C8T355C66;
+				INFOPLIST_FILE = KoombeaGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.KoombeaGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KoombeaGame;
+			};
+			name = Debug;
+		};
+		EC8D1B9320D9EE8700E1305A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C51F73C7E3F2CF9F9EB5D86 /* Pods-KoombeaGameUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6C8T355C66;
+				INFOPLIST_FILE = KoombeaGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.KoombeaGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KoombeaGame;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC8D1B5B20D9EE8500E1305A /* Build configuration list for PBXProject "KoombeaGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC8D1B8920D9EE8700E1305A /* Debug */,
+				EC8D1B8A20D9EE8700E1305A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC8D1B8B20D9EE8700E1305A /* Build configuration list for PBXNativeTarget "KoombeaGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC8D1B8C20D9EE8700E1305A /* Debug */,
+				EC8D1B8D20D9EE8700E1305A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC8D1B8E20D9EE8700E1305A /* Build configuration list for PBXNativeTarget "KoombeaGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC8D1B8F20D9EE8700E1305A /* Debug */,
+				EC8D1B9020D9EE8700E1305A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC8D1B9120D9EE8700E1305A /* Build configuration list for PBXNativeTarget "KoombeaGameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC8D1B9220D9EE8700E1305A /* Debug */,
+				EC8D1B9320D9EE8700E1305A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EC8D1B6A20D9EE8500E1305A /* KoombeaGame.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EC8D1B6B20D9EE8500E1305A /* KoombeaGame.xcdatamodel */,
+			);
+			currentVersion = EC8D1B6B20D9EE8500E1305A /* KoombeaGame.xcdatamodel */;
+			path = KoombeaGame.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EC8D1B5820D9EE8500E1305A /* Project object */;
+}

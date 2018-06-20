@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Walkthrough1ViewController" customModule="KoombeaGame" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_Walkthrough" translatesAutoresizingMaskIntoConstraints="NO" id="J1z-12-zhw">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bitmap1" translatesAutoresizingMaskIntoConstraints="NO" id="R5y-Cz-ZeA">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="463"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle_1" translatesAutoresizingMaskIntoConstraints="NO" id="3Lh-7P-2cY">
+                    <rect key="frame" x="0.0" y="180" width="375" height="487"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle2_1" translatesAutoresizingMaskIntoConstraints="NO" id="FOO-jO-DDp">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydo-1C-iVE">
+                    <rect key="frame" x="72.5" y="403" width="230.5" height="83"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="230.5" id="i8N-wg-Q8a"/>
+                        <constraint firstAttribute="height" constant="83" id="sKh-o4-p9a"/>
+                    </constraints>
+                    <string key="text">Access our
+extented Catalog</string>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZa-bn-97L">
+                    <rect key="frame" x="91" y="517" width="192" height="54"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="McQ-wc-D0U"/>
+                        <constraint firstAttribute="width" constant="192" id="nLS-oq-rla"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <inset key="titleEdgeInsets" minX="-51" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="76" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Next" image="arrow_next" backgroundImage="Rectangle_Next_Button">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="nextView:" destination="-1" eventType="touchUpInside" id="NZK-fY-Mw1"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="R5y-Cz-ZeA" secondAttribute="bottom" constant="204" id="CMC-nF-GYs"/>
+                <constraint firstItem="ydo-1C-iVE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FMH-ny-RxR"/>
+                <constraint firstItem="J1z-12-zhw" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="FUf-FS-776"/>
+                <constraint firstItem="R5y-Cz-ZeA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FxP-OV-Okb"/>
+                <constraint firstItem="cZa-bn-97L" firstAttribute="top" secondItem="ydo-1C-iVE" secondAttribute="bottom" constant="31" id="MQN-12-vhL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FOO-jO-DDp" secondAttribute="bottom" id="Mxn-kv-KzT"/>
+                <constraint firstItem="3Lh-7P-2cY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="160" id="QuV-7w-6VC"/>
+                <constraint firstItem="J1z-12-zhw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RLp-CR-n4w"/>
+                <constraint firstItem="FOO-jO-DDp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SQB-hT-Suv"/>
+                <constraint firstItem="cZa-bn-97L" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="T7B-Kp-wAL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FOO-jO-DDp" secondAttribute="trailing" id="W3D-Xx-bmL"/>
+                <constraint firstItem="3Lh-7P-2cY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aQv-LU-HJ7"/>
+                <constraint firstItem="J1z-12-zhw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bAY-Uy-o3R"/>
+                <constraint firstItem="J1z-12-zhw" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="bd7-ap-8Xj"/>
+                <constraint firstItem="3Lh-7P-2cY" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="bzN-yb-zkt"/>
+                <constraint firstItem="R5y-Cz-ZeA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eUo-Fj-qis"/>
+                <constraint firstItem="R5y-Cz-ZeA" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="il4-Fa-SvX"/>
+                <constraint firstItem="3Lh-7P-2cY" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="reR-1y-tNQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cZa-bn-97L" secondAttribute="bottom" constant="96" id="uAu-et-qjq"/>
+                <constraint firstItem="FOO-jO-DDp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uYo-Kk-ktq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Bitmap1" width="187" height="234"/>
+        <image name="Rectangle2_1" width="187" height="399"/>
+        <image name="Rectangle_1" width="187" height="133"/>
+        <image name="Rectangle_Next_Button" width="97" height="28"/>
+        <image name="arrow_next" width="13" height="7"/>
+        <image name="bg_Walkthrough" width="187" height="406"/>
+    </resources>
+</document>
