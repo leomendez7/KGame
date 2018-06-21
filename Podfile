@@ -17,6 +17,8 @@ target 'KoombeaGame' do
   pod 'UIColor_Hex_Swift', '~> 4.0.1'
   pod "Device", '~> 3.0.3'
   pod 'InteractiveSideMenu'
+  pod 'Kingfisher', '~> 4.0'
+  pod 'Tamamushi'
 
   target 'KoombeaGameTests' do
     inherit! :search_paths

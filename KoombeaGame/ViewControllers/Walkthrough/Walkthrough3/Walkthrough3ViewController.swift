@@ -30,7 +30,9 @@ class Walkthrough3ViewController: UIViewController {
         Session.saveSessionViewed(sessionToken: true)
         
         let nextView = DashboardViewController()
-        self.present(nextView, animated: true, completion: nil)
+        let navigationController = UINavigationController.init(rootViewController: nextView)
+        navigationController.navigationBar.isTranslucent = false
+        self.present(navigationController, animated: true, completion: nil)
     }
     
 }

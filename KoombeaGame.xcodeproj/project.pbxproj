@@ -9,9 +9,33 @@
 /* Begin PBXBuildFile section */
 		2B66CFB4BAE41615CE9C0D84 /* Pods_KoombeaGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23D0649A36B5E4DA1673077 /* Pods_KoombeaGameUITests.framework */; };
 		4D9349E320DA895B00484F5B /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9349E220DA895B00484F5B /* ActivityIndicator.swift */; };
+		4D9349E720DA92A900484F5B /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9349E520DA92A900484F5B /* Header.swift */; };
+		4D9349E820DA92A900484F5B /* Header.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9349E620DA92A900484F5B /* Header.xib */; };
+		4D9349EE20DA9C7A00484F5B /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9349EC20DA9C7A00484F5B /* DashboardTableViewCell.swift */; };
+		4D9349EF20DA9C7A00484F5B /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9349ED20DA9C7A00484F5B /* DashboardTableViewCell.xib */; };
+		4D9349F320DA9C9800484F5B /* DashboardTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9349F120DA9C9800484F5B /* DashboardTableViewCell2.swift */; };
+		4D9349F420DA9C9800484F5B /* DashboardTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9349F220DA9C9800484F5B /* DashboardTableViewCell2.xib */; };
+		4D9349F820DAE38A00484F5B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9349F620DAE38A00484F5B /* DetailViewController.swift */; };
+		4D9349F920DAE38A00484F5B /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9349F720DAE38A00484F5B /* DetailViewController.xib */; };
+		4DA3900120DAF77400AD85F8 /* NSNumberFormatter+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3900020DAF77400AD85F8 /* NSNumberFormatter+Utils.swift */; };
 		AE5F89C8E9CDD10F152053A0 /* Pods_KoombeaGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC510561191E61D5B5F29F59 /* Pods_KoombeaGame.framework */; };
+		EC2C5B5F20DB38C4003357D2 /* ImageDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2C5B5D20DB38C4003357D2 /* ImageDetailsViewController.xib */; };
+		EC2C5B6020DB38C4003357D2 /* ImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B5E20DB38C4003357D2 /* ImageDetailsViewController.swift */; };
+		EC2C5B6220DB5123003357D2 /* UINavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B6120DB5123003357D2 /* UINavigationBarExtension.swift */; };
+		EC2C5B6620DB690C003357D2 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B6420DB690C003357D2 /* FilterViewController.swift */; };
+		EC2C5B6720DB690C003357D2 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2C5B6520DB690C003357D2 /* FilterViewController.xib */; };
+		EC2C5B6C20DB6A0B003357D2 /* FilterHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B6A20DB6A0B003357D2 /* FilterHeader.swift */; };
+		EC2C5B6D20DB6A0B003357D2 /* FilterHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2C5B6B20DB6A0B003357D2 /* FilterHeader.xib */; };
+		EC2C5B7120DB6A25003357D2 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B6F20DB6A25003357D2 /* FilterTableViewCell.swift */; };
+		EC2C5B7220DB6A25003357D2 /* FilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2C5B7020DB6A25003357D2 /* FilterTableViewCell.xib */; };
+		EC2C5B7720DB6F1E003357D2 /* RatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B7520DB6F1E003357D2 /* RatingTableViewCell.swift */; };
+		EC2C5B7820DB6F1E003357D2 /* RatingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2C5B7620DB6F1E003357D2 /* RatingTableViewCell.xib */; };
+		EC2C5B7C20DB70ED003357D2 /* SortingByTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B7A20DB70ED003357D2 /* SortingByTableViewCell.swift */; };
+		EC2C5B7D20DB70ED003357D2 /* SortingByTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2C5B7B20DB70ED003357D2 /* SortingByTableViewCell.xib */; };
+		EC2C5B7F20DB78D4003357D2 /* UIcolor+KoombaGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B7E20DB78D4003357D2 /* UIcolor+KoombaGame.swift */; };
+		EC2C5B8320DB79DE003357D2 /* ApplyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B8120DB79DE003357D2 /* ApplyTableViewCell.swift */; };
+		EC2C5B8420DB79DE003357D2 /* ApplyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2C5B8220DB79DE003357D2 /* ApplyTableViewCell.xib */; };
 		EC8D1B6420D9EE8500E1305A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1B6320D9EE8500E1305A /* AppDelegate.swift */; };
-		EC8D1B6620D9EE8500E1305A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1B6520D9EE8500E1305A /* ViewController.swift */; };
 		EC8D1B6920D9EE8500E1305A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC8D1B6720D9EE8500E1305A /* Main.storyboard */; };
 		EC8D1B6C20D9EE8500E1305A /* KoombeaGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1B6A20D9EE8500E1305A /* KoombeaGame.xcdatamodeld */; };
 		EC8D1B6E20D9EE8700E1305A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC8D1B6D20D9EE8700E1305A /* Assets.xcassets */; };
@@ -57,6 +81,15 @@
 /* Begin PBXFileReference section */
 		3F1FBBA2DA47FED3ABFB835A /* Pods-KoombeaGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoombeaGame/Pods-KoombeaGame.release.xcconfig"; sourceTree = "<group>"; };
 		4D9349E220DA895B00484F5B /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		4D9349E520DA92A900484F5B /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		4D9349E620DA92A900484F5B /* Header.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Header.xib; sourceTree = "<group>"; };
+		4D9349EC20DA9C7A00484F5B /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
+		4D9349ED20DA9C7A00484F5B /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardTableViewCell.xib; sourceTree = "<group>"; };
+		4D9349F120DA9C9800484F5B /* DashboardTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell2.swift; sourceTree = "<group>"; };
+		4D9349F220DA9C9800484F5B /* DashboardTableViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardTableViewCell2.xib; sourceTree = "<group>"; };
+		4D9349F620DAE38A00484F5B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		4D9349F720DAE38A00484F5B /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		4DA3900020DAF77400AD85F8 /* NSNumberFormatter+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNumberFormatter+Utils.swift"; sourceTree = "<group>"; };
 		9194796A2F8037F673AA58F4 /* Pods-KoombeaGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaGameUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoombeaGameUITests/Pods-KoombeaGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C51F73C7E3F2CF9F9EB5D86 /* Pods-KoombeaGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaGameUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoombeaGameUITests/Pods-KoombeaGameUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A23D0649A36B5E4DA1673077 /* Pods_KoombeaGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoombeaGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,9 +98,24 @@
 		BC510561191E61D5B5F29F59 /* Pods_KoombeaGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoombeaGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF63FA0A5B6758B52BA239E7 /* Pods-KoombeaGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoombeaGame/Pods-KoombeaGame.debug.xcconfig"; sourceTree = "<group>"; };
 		D51928B015644190743EA6E9 /* Pods-KoombeaGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaGameTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoombeaGameTests/Pods-KoombeaGameTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EC2C5B5D20DB38C4003357D2 /* ImageDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageDetailsViewController.xib; sourceTree = "<group>"; };
+		EC2C5B5E20DB38C4003357D2 /* ImageDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewController.swift; sourceTree = "<group>"; };
+		EC2C5B6120DB5123003357D2 /* UINavigationBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBarExtension.swift; sourceTree = "<group>"; };
+		EC2C5B6420DB690C003357D2 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		EC2C5B6520DB690C003357D2 /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
+		EC2C5B6A20DB6A0B003357D2 /* FilterHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeader.swift; sourceTree = "<group>"; };
+		EC2C5B6B20DB6A0B003357D2 /* FilterHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterHeader.xib; sourceTree = "<group>"; };
+		EC2C5B6F20DB6A25003357D2 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		EC2C5B7020DB6A25003357D2 /* FilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterTableViewCell.xib; sourceTree = "<group>"; };
+		EC2C5B7520DB6F1E003357D2 /* RatingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTableViewCell.swift; sourceTree = "<group>"; };
+		EC2C5B7620DB6F1E003357D2 /* RatingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingTableViewCell.xib; sourceTree = "<group>"; };
+		EC2C5B7A20DB70ED003357D2 /* SortingByTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingByTableViewCell.swift; sourceTree = "<group>"; };
+		EC2C5B7B20DB70ED003357D2 /* SortingByTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortingByTableViewCell.xib; sourceTree = "<group>"; };
+		EC2C5B7E20DB78D4003357D2 /* UIcolor+KoombaGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIcolor+KoombaGame.swift"; sourceTree = "<group>"; };
+		EC2C5B8120DB79DE003357D2 /* ApplyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyTableViewCell.swift; sourceTree = "<group>"; };
+		EC2C5B8220DB79DE003357D2 /* ApplyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplyTableViewCell.xib; sourceTree = "<group>"; };
 		EC8D1B6020D9EE8500E1305A /* KoombeaGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoombeaGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC8D1B6320D9EE8500E1305A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC8D1B6520D9EE8500E1305A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC8D1B6820D9EE8500E1305A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC8D1B6B20D9EE8500E1305A /* KoombeaGame.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KoombeaGame.xcdatamodel; sourceTree = "<group>"; };
 		EC8D1B6D20D9EE8700E1305A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,9 +176,68 @@
 		4D9349E120DA894300484F5B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EC2C5B6120DB5123003357D2 /* UINavigationBarExtension.swift */,
+				4DA3900020DAF77400AD85F8 /* NSNumberFormatter+Utils.swift */,
 				4D9349E220DA895B00484F5B /* ActivityIndicator.swift */,
+				EC2C5B7E20DB78D4003357D2 /* UIcolor+KoombaGame.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4D9349E420DA927A00484F5B /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				4D9349E520DA92A900484F5B /* Header.swift */,
+				4D9349E620DA92A900484F5B /* Header.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		4D9349E920DA9C1400484F5B /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D1BBB20DA197600E1305A /* Cell2 */,
+				EC8D1BBA20DA196A00E1305A /* Cell */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		4D9349EA20DA9C2600484F5B /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				4D9349E420DA927A00484F5B /* Header */,
+				4D9349F020DA9C8300484F5B /* Cell2 */,
+				4D9349EB20DA9C5900484F5B /* Cell */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		4D9349EB20DA9C5900484F5B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4D9349EC20DA9C7A00484F5B /* DashboardTableViewCell.swift */,
+				4D9349ED20DA9C7A00484F5B /* DashboardTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4D9349F020DA9C8300484F5B /* Cell2 */ = {
+			isa = PBXGroup;
+			children = (
+				4D9349F120DA9C9800484F5B /* DashboardTableViewCell2.swift */,
+				4D9349F220DA9C9800484F5B /* DashboardTableViewCell2.xib */,
+			);
+			path = Cell2;
+			sourceTree = "<group>";
+		};
+		4D9349F520DAE36100484F5B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C5B5820DB3820003357D2 /* ImageDetails */,
+				4D9349F620DAE38A00484F5B /* DetailViewController.swift */,
+				4D9349F720DAE38A00484F5B /* DetailViewController.xib */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		89E43C0B8A4755ADFFD84906 /* Frameworks */ = {
@@ -154,6 +261,82 @@
 				9C51F73C7E3F2CF9F9EB5D86 /* Pods-KoombeaGameUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC2C5B5820DB3820003357D2 /* ImageDetails */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C5B5E20DB38C4003357D2 /* ImageDetailsViewController.swift */,
+				EC2C5B5D20DB38C4003357D2 /* ImageDetailsViewController.xib */,
+			);
+			path = ImageDetails;
+			sourceTree = "<group>";
+		};
+		EC2C5B6320DB68EB003357D2 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C5B6920DB69E9003357D2 /* Header */,
+				EC2C5B6820DB69D9003357D2 /* Cell */,
+				EC2C5B6420DB690C003357D2 /* FilterViewController.swift */,
+				EC2C5B6520DB690C003357D2 /* FilterViewController.xib */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		EC2C5B6820DB69D9003357D2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C5B8020DB79B6003357D2 /* Apply */,
+				EC2C5B7920DB70DC003357D2 /* SortingBy2 */,
+				EC2C5B7420DB6EF3003357D2 /* Rating */,
+				EC2C5B7320DB6EE2003357D2 /* SortingBy */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EC2C5B6920DB69E9003357D2 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C5B6A20DB6A0B003357D2 /* FilterHeader.swift */,
+				EC2C5B6B20DB6A0B003357D2 /* FilterHeader.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		EC2C5B7320DB6EE2003357D2 /* SortingBy */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C5B6F20DB6A25003357D2 /* FilterTableViewCell.swift */,
+				EC2C5B7020DB6A25003357D2 /* FilterTableViewCell.xib */,
+			);
+			path = SortingBy;
+			sourceTree = "<group>";
+		};
+		EC2C5B7420DB6EF3003357D2 /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C5B7520DB6F1E003357D2 /* RatingTableViewCell.swift */,
+				EC2C5B7620DB6F1E003357D2 /* RatingTableViewCell.xib */,
+			);
+			path = Rating;
+			sourceTree = "<group>";
+		};
+		EC2C5B7920DB70DC003357D2 /* SortingBy2 */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C5B7A20DB70ED003357D2 /* SortingByTableViewCell.swift */,
+				EC2C5B7B20DB70ED003357D2 /* SortingByTableViewCell.xib */,
+			);
+			path = SortingBy2;
+			sourceTree = "<group>";
+		};
+		EC2C5B8020DB79B6003357D2 /* Apply */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C5B8120DB79DE003357D2 /* ApplyTableViewCell.swift */,
+				EC2C5B8220DB79DE003357D2 /* ApplyTableViewCell.xib */,
+			);
+			path = Apply;
 			sourceTree = "<group>";
 		};
 		EC8D1B5720D9EE8500E1305A = {
@@ -181,12 +364,11 @@
 		EC8D1B6220D9EE8500E1305A /* KoombeaGame */ = {
 			isa = PBXGroup;
 			children = (
-				4D9349E120DA894300484F5B /* Utilities */,
 				EC8D1B9420D9F07C00E1305A /* Resources */,
 				EC8D1B9820D9F0CF00E1305A /* Base */,
 				EC8D1B9720D9F0B900E1305A /* Models */,
+				4D9349E120DA894300484F5B /* Utilities */,
 				EC8D1B9920D9F0E700E1305A /* ViewControllers */,
-				EC8D1B6520D9EE8500E1305A /* ViewController.swift */,
 				EC8D1B7220D9EE8700E1305A /* Info.plist */,
 				EC8D1B6A20D9EE8500E1305A /* KoombeaGame.xcdatamodeld */,
 			);
@@ -243,6 +425,8 @@
 		EC8D1B9920D9F0E700E1305A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EC2C5B6320DB68EB003357D2 /* Filter */,
+				4D9349F520DAE36100484F5B /* Detail */,
 				EC8D1BB520DA135500E1305A /* Dashboard */,
 				EC8D1B9B20D9F34000E1305A /* Walkthrough */,
 			);
@@ -289,8 +473,8 @@
 		EC8D1BB520DA135500E1305A /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				EC8D1BBB20DA197600E1305A /* Cell2 */,
-				EC8D1BBA20DA196A00E1305A /* Cell */,
+				4D9349E920DA9C1400484F5B /* Collection */,
+				4D9349EA20DA9C2600484F5B /* TableView */,
 				EC8D1BB620DA137800E1305A /* DashboardViewController.swift */,
 				EC8D1BB720DA137800E1305A /* DashboardViewController.xib */,
 			);
@@ -424,14 +608,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC8D1BAE20D9F3CC00E1305A /* Walkthrough1ViewController.xib in Resources */,
+				EC2C5B7220DB6A25003357D2 /* FilterTableViewCell.xib in Resources */,
 				EC8D1BA520D9F38300E1305A /* Walkthrough2ViewController.xib in Resources */,
 				EC8D1BC320DA19A200E1305A /* DashboardCollectionViewCell2.xib in Resources */,
 				EC8D1BBF20DA198E00E1305A /* DashboardCollectionViewCell.xib in Resources */,
+				4D9349E820DA92A900484F5B /* Header.xib in Resources */,
+				EC2C5B7820DB6F1E003357D2 /* RatingTableViewCell.xib in Resources */,
+				EC2C5B7D20DB70ED003357D2 /* SortingByTableViewCell.xib in Resources */,
+				EC2C5B6D20DB6A0B003357D2 /* FilterHeader.xib in Resources */,
+				4D9349F420DA9C9800484F5B /* DashboardTableViewCell2.xib in Resources */,
 				EC8D1BAA20D9F39900E1305A /* Walkthrough3ViewController.xib in Resources */,
 				EC8D1BB920DA137800E1305A /* DashboardViewController.xib in Resources */,
 				EC8D1B7120D9EE8700E1305A /* LaunchScreen.storyboard in Resources */,
+				EC2C5B5F20DB38C4003357D2 /* ImageDetailsViewController.xib in Resources */,
+				4D9349F920DAE38A00484F5B /* DetailViewController.xib in Resources */,
 				EC8D1B9620D9F09A00E1305A /* Default-568h@2x.png in Resources */,
 				EC8D1B6E20D9EE8700E1305A /* Assets.xcassets in Resources */,
+				EC2C5B8420DB79DE003357D2 /* ApplyTableViewCell.xib in Resources */,
+				4D9349EF20DA9C7A00484F5B /* DashboardTableViewCell.xib in Resources */,
+				EC2C5B6720DB690C003357D2 /* FilterViewController.xib in Resources */,
 				EC8D1B6920D9EE8500E1305A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,9 +661,11 @@
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/InteractiveSideMenu/InteractiveSideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Tamamushi/Tamamushi.framework",
 				"${BUILT_PRODUCTS_DIR}/UIAlertController+Blocks/UIAlertController_Blocks.framework",
 				"${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework",
 			);
@@ -480,9 +677,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InteractiveSideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tamamushi.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIAlertController_Blocks.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex_Swift.framework",
 			);
@@ -552,18 +751,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC8D1B6620D9EE8500E1305A /* ViewController.swift in Sources */,
+				EC2C5B6020DB38C4003357D2 /* ImageDetailsViewController.swift in Sources */,
+				4D9349F820DAE38A00484F5B /* DetailViewController.swift in Sources */,
 				EC8D1BBE20DA198E00E1305A /* DashboardCollectionViewCell.swift in Sources */,
+				EC2C5B7C20DB70ED003357D2 /* SortingByTableViewCell.swift in Sources */,
 				EC8D1B6420D9EE8500E1305A /* AppDelegate.swift in Sources */,
+				EC2C5B7F20DB78D4003357D2 /* UIcolor+KoombaGame.swift in Sources */,
 				EC8D1BB020DA088F00E1305A /* Game.swift in Sources */,
+				EC2C5B7720DB6F1E003357D2 /* RatingTableViewCell.swift in Sources */,
 				4D9349E320DA895B00484F5B /* ActivityIndicator.swift in Sources */,
+				4D9349F320DA9C9800484F5B /* DashboardTableViewCell2.swift in Sources */,
 				EC8D1BAD20D9F3CC00E1305A /* Walkthrough1ViewController.swift in Sources */,
+				EC2C5B6220DB5123003357D2 /* UINavigationBarExtension.swift in Sources */,
+				EC2C5B8320DB79DE003357D2 /* ApplyTableViewCell.swift in Sources */,
 				EC8D1BA420D9F38300E1305A /* Walkthrough2ViewController.swift in Sources */,
+				EC2C5B6C20DB6A0B003357D2 /* FilterHeader.swift in Sources */,
 				EC8D1BA920D9F39900E1305A /* Walkthrough3ViewController.swift in Sources */,
 				EC8D1B6C20D9EE8500E1305A /* KoombeaGame.xcdatamodeld in Sources */,
+				4D9349EE20DA9C7A00484F5B /* DashboardTableViewCell.swift in Sources */,
 				EC8D1BB820DA137800E1305A /* DashboardViewController.swift in Sources */,
+				EC2C5B6620DB690C003357D2 /* FilterViewController.swift in Sources */,
+				4D9349E720DA92A900484F5B /* Header.swift in Sources */,
 				EC8D1BB220DA0F1E00E1305A /* DataService.swift in Sources */,
 				EC8D1BC220DA19A200E1305A /* DashboardCollectionViewCell2.swift in Sources */,
+				EC2C5B7120DB6A25003357D2 /* FilterTableViewCell.swift in Sources */,
+				4DA3900120DAF77400AD85F8 /* NSNumberFormatter+Utils.swift in Sources */,
 				EC8D1BB420DA12B500E1305A /* Session.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

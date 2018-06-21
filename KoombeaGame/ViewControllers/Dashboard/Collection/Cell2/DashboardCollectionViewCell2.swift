@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DashboardCollectionViewCell2: UICollectionViewCell {
 
@@ -15,16 +16,23 @@ class DashboardCollectionViewCell2: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
     
     func config(game: Game) {
         nameGameLabel.text = game.name
+        gameImageView.layer.cornerRadius = 6
+        gameImageView.layer.borderWidth = 1
+        gameImageView.layer.borderColor = UIColor.lightGray.cgColor
         
-        let urlImage = game.imageURL
+        guard let urlImage = game.imageURL else {
+            return
+        }
         
-        if urlImage != ""{
-            guard let safeURL = urlImage?.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else {
+        let newUrl = urlImage.replacingOccurrences(of: "\\", with: "", options: .literal, range: nil) 
+        
+        if urlImage != "" {
+            guard let safeURL = newUrl.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else {
                 return
             }
             guard let url = URL(string: safeURL) else {
@@ -32,7 +40,9 @@ class DashboardCollectionViewCell2: UICollectionViewCell {
             }
             var placeholderImage = UIImage()
             placeholderImage = #imageLiteral(resourceName: "noArticles")
-            gameImageView.af_setImage(withURL: url, placeholderImage: placeholderImage, imageTransition: .crossDissolve(0.2))
+            
+            self.gameImageView.kf.indicatorType = .activity
+            self.gameImageView.af_setImage(withURL: url, placeholderImage: placeholderImage, imageTransition: .crossDissolve(0.2))
         }else{
             gameImageView.image = #imageLiteral(resourceName: "noArticles")
         }

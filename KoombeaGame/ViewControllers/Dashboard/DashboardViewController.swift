@@ -7,152 +7,195 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DashboardViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var collectionView2: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
     
-    var brands = ["All","Nintendo","PlayStation","Xbox", "PC"]
+    var headers = ["","New","Poluar","All"]
     var games = [Game]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBar()
         createTable()
         loadInfo()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.tintColor = UIColor.black
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    func setNavigationBar(){
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        let rightBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "search_icon"), style: .plain, target: self, action: #selector(self.filter(_:)))
+        self.navigationItem.rightBarButtonItem = rightBarButton
+        self.tabBarController?.tabBar.isHidden = true
+        let leftBarButton = UIBarButtonItem(title: "Game", style: .plain, target: self, action: nil)
+        self.navigationItem.leftBarButtonItem = leftBarButton
+    }
+    
+    @objc func filter(_ sender: UIBarButtonItem) {
+        let nextView = FilterViewController()
+        let navigationController = UINavigationController.init(rootViewController: nextView)
+        navigationController.navigationBar.isTranslucent = false
+        self.present(navigationController, animated: true, completion: nil)
     }
     
     func loadInfo(){
-        ActivityIndicator.shared.startSpinnerAnimation(message: "Cargando...")
+        ActivityIndicator.shared.startSpinnerAnimation(message: "Loading...")
         DataService.shared.loadGame { (error, games) in
             if let e = error {
                 print(e)
             }else {
                 self.games = games.map { $0 }!
-                self.collectionView2.reloadData()
+                self.tableView.reloadData()
             }
             ActivityIndicator.shared.stopSpinnerAnimation()
         }
     }
 }
 
-extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    func collectionViewflowLayaout() {
-        var flowLayout: UICollectionViewFlowLayout {
-            let _flowLayout = UICollectionViewFlowLayout()
-            
-            // edit properties here
-            _flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width / 2.0, height: UIScreen.main.bounds.width / 3.0)
-            _flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
-            _flowLayout.scrollDirection = UICollectionViewScrollDirection.horizontal
-            _flowLayout.minimumInteritemSpacing = 0.0
-            _flowLayout.minimumLineSpacing = 0
-            _flowLayout.sectionInset.right = 0
-            _flowLayout.sectionInset.left = 0
-            _flowLayout.sectionInset.top = 0
-            _flowLayout.sectionInset.bottom = 0
-            // edit properties here
-            
-            return _flowLayout
-        }
-        self.collectionView.collectionViewLayout = flowLayout
-    }
-    
-    func collectionViewflowLayaout2() {
-        var flowLayout: UICollectionViewFlowLayout {
-            let _flowLayout = UICollectionViewFlowLayout()
-            
-            // edit properties here
-            _flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width / 4.0, height: UIScreen.main.bounds.width / 1.0)
-            _flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
-            _flowLayout.scrollDirection = UICollectionViewScrollDirection.horizontal
-            _flowLayout.minimumInteritemSpacing = 0.0
-            _flowLayout.minimumLineSpacing = 0
-            _flowLayout.sectionInset.right = 0
-            _flowLayout.sectionInset.left = 0
-            _flowLayout.sectionInset.top = 0
-            _flowLayout.sectionInset.bottom = 0
-            // edit properties here
-            
-            return _flowLayout
-        }
-        self.collectionView2.collectionViewLayout = flowLayout
-    }
+extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
     
     func createTable() {
-        self.collectionView.register(UINib(nibName: "DashboardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
-        self.collectionView.dataSource = self
-        self.collectionView.delegate = self
-        self.collectionViewflowLayaout()
-        self.collectionView.reloadData()
-        
-        self.collectionView2.register(UINib(nibName: "DashboardCollectionViewCell2", bundle: nil), forCellWithReuseIdentifier: "cell2")
-        self.collectionView2.dataSource = self
-        self.collectionView2.delegate = self
-        self.collectionViewflowLayaout2()
-        self.collectionView2.reloadData()
+        self.tableView.register(UINib(nibName: "DashboardTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        self.tableView.register(UINib(nibName: "DashboardTableViewCell2", bundle: nil), forCellReuseIdentifier: "cell2")
+        self.tableView.register(UINib(nibName: "Header", bundle: nil), forHeaderFooterViewReuseIdentifier: "header")
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.reloadData()
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 4
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        if collectionView == self.collectionView {
-            return self.brands.count
-        }else {
-            switch section {
-            case 0:
-                return 5
-            case 1:
-                return 5
-            default:
-                return self.games.count
-            }
+        if indexPath.section == 0 {
+            return 55
+        }else{
+            return 175
         }
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        if collectionView == self.collectionView2 {
-            return 3
-        }else{
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
             return 0
+        }else{
+            return 44
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == self.collectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath as IndexPath) as! DashboardCollectionViewCell
-            
-            
+    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        return self.tableView(tableView, heightForHeaderInSection:section)
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.tableView(tableView, heightForRowAt: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.section == 0 {
+            let cell:DashboardTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DashboardTableViewCell
+            cell.delegate = self
             return cell
         }else{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath as IndexPath) as! DashboardCollectionViewCell2
+            let cell:DashboardTableViewCell2 = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! DashboardTableViewCell2
+            cell.delegate = self
             switch indexPath.section {
-            case 0:
-                if games.count != 0 {
-                  cell.config(game: games[indexPath.row])
-                }
-                
             case 1:
-                if games.count != 0 {
-                    cell.config(game: games[indexPath.row])
+                let new = games.sorted { $0.createdAt! < $1.createdAt! }
+                cell.games = new
+                if new.count < 5 {
+                    cell.count = new.count
+                }else{
+                    cell.count = 5
                 }
+                cell.collectionView.reloadData()
+            case 2:
+                let popular = games.filter { $0.popular == "true" }
+                cell.games = popular
+                cell.count = popular.count
+                cell.collectionView.reloadData()
             default:
-                if games.count != 0 {
-                    cell.config(game: games[indexPath.row])
-                }
+                 cell.games = self.games
+                 cell.count = self.games.count
+                cell.collectionView.reloadData()
             }
-            
             return cell
         }
-        
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header:Header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header") as! Header
+        header.nameHeaderLabel.text = headers[section]
         
+        switch section {
+        case 1:
+            let new = games.sorted { $0.createdAt! < $1.createdAt! }
+            var count = 0
+            if new.count < 5 {
+                count = new.count
+            }else{
+                count = 5
+            }
+            header.nameHeaderLabel.text = "\(headers[section]) (\(count))"
+        case 2:
+            let popular = games.filter { $0.popular == "true" }
+            header.nameHeaderLabel.text = "\(headers[section]) (\(popular.count))"
+        default:
+            header.nameHeaderLabel.text = "\(headers[section]) (\(self.games.count))"
+        }
+        return header
+    }
+    
+}
+
+extension DashboardViewController: DashboardTableViewCell2Delegate, DashboardTableViewCellDelegate {
+    
+    func DashboardTableViewCellDidSelect(brands: String) {
+        if brands == "All" {
+            do {
+                let realm = try Realm()
+                let games = realm.objects(Game.self)
+                self.games.removeAll()
+                self.games = games.map { $0 }
+                self.tableView.reloadData()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }else{
+            do {
+                let realm = try Realm()
+                let predicate = NSPredicate(format: "brand = %@ ", brands)
+                let games = realm.objects(Game.self).filter(predicate)
+                self.games.removeAll()
+                self.games = games.map { $0 }
+                self.tableView.reloadData()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func DashboardTableViewCell2DidSelect(game: Game) {
+        let nextView = DetailViewController()
+        nextView.game = game
+        self.navigationController?.pushViewController(nextView, animated: true)
     }
 }
