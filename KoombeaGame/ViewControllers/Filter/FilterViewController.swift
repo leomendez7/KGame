@@ -105,7 +105,7 @@ extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell:FilterTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FilterTableViewCell
-            cell.nameLabel.text = sortingBy[indexPath.row]
+            cell.config(category: sortingBy[indexPath.row])
             cell.delegate = self
             return cell
         case 1:

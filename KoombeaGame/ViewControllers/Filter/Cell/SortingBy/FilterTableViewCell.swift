@@ -22,11 +22,21 @@ class FilterTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func config(category: String) {
+        self.nameLabel.text = category
+        if category == "Popularity" {
+            check = !check
+            let checkImage: UIImage? = #imageLiteral(resourceName: "radio-on-button (1)").withRenderingMode(.alwaysOriginal)
+            radioButton.setImage(checkImage, for: .normal)
+            delegate?.filterTableViewCellDidSelect(category: self.nameLabel.text!)
+        }
     }
     
     
