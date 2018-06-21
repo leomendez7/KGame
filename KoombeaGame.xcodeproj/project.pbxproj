@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2B66CFB4BAE41615CE9C0D84 /* Pods_KoombeaGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23D0649A36B5E4DA1673077 /* Pods_KoombeaGameUITests.framework */; };
+		4D7BB19F20DBF0EA0085C2FE /* FilteringResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7BB19D20DBF0EA0085C2FE /* FilteringResultsViewController.swift */; };
+		4D7BB1A020DBF0EA0085C2FE /* FilteringResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D7BB19E20DBF0EA0085C2FE /* FilteringResultsViewController.xib */; };
 		4D9349E320DA895B00484F5B /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9349E220DA895B00484F5B /* ActivityIndicator.swift */; };
 		4D9349E720DA92A900484F5B /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9349E520DA92A900484F5B /* Header.swift */; };
 		4D9349E820DA92A900484F5B /* Header.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9349E620DA92A900484F5B /* Header.xib */; };
@@ -80,6 +82,8 @@
 
 /* Begin PBXFileReference section */
 		3F1FBBA2DA47FED3ABFB835A /* Pods-KoombeaGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoombeaGame/Pods-KoombeaGame.release.xcconfig"; sourceTree = "<group>"; };
+		4D7BB19D20DBF0EA0085C2FE /* FilteringResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringResultsViewController.swift; sourceTree = "<group>"; };
+		4D7BB19E20DBF0EA0085C2FE /* FilteringResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilteringResultsViewController.xib; sourceTree = "<group>"; };
 		4D9349E220DA895B00484F5B /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		4D9349E520DA92A900484F5B /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		4D9349E620DA92A900484F5B /* Header.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Header.xib; sourceTree = "<group>"; };
@@ -173,6 +177,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D7BB19C20DBF0C30085C2FE /* FilteringResults */ = {
+			isa = PBXGroup;
+			children = (
+				4D7BB19D20DBF0EA0085C2FE /* FilteringResultsViewController.swift */,
+				4D7BB19E20DBF0EA0085C2FE /* FilteringResultsViewController.xib */,
+			);
+			path = FilteringResults;
+			sourceTree = "<group>";
+		};
 		4D9349E120DA894300484F5B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,6 +438,7 @@
 		EC8D1B9920D9F0E700E1305A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4D7BB19C20DBF0C30085C2FE /* FilteringResults */,
 				EC2C5B6320DB68EB003357D2 /* Filter */,
 				4D9349F520DAE36100484F5B /* Detail */,
 				EC8D1BB520DA135500E1305A /* Dashboard */,
@@ -615,6 +629,7 @@
 				4D9349E820DA92A900484F5B /* Header.xib in Resources */,
 				EC2C5B7820DB6F1E003357D2 /* RatingTableViewCell.xib in Resources */,
 				EC2C5B7D20DB70ED003357D2 /* SortingByTableViewCell.xib in Resources */,
+				4D7BB1A020DBF0EA0085C2FE /* FilteringResultsViewController.xib in Resources */,
 				EC2C5B6D20DB6A0B003357D2 /* FilterHeader.xib in Resources */,
 				4D9349F420DA9C9800484F5B /* DashboardTableViewCell2.xib in Resources */,
 				EC8D1BAA20D9F39900E1305A /* Walkthrough3ViewController.xib in Resources */,
@@ -773,6 +788,7 @@
 				EC2C5B6620DB690C003357D2 /* FilterViewController.swift in Sources */,
 				4D9349E720DA92A900484F5B /* Header.swift in Sources */,
 				EC8D1BB220DA0F1E00E1305A /* DataService.swift in Sources */,
+				4D7BB19F20DBF0EA0085C2FE /* FilteringResultsViewController.swift in Sources */,
 				EC8D1BC220DA19A200E1305A /* DashboardCollectionViewCell2.swift in Sources */,
 				EC2C5B7120DB6A25003357D2 /* FilterTableViewCell.swift in Sources */,
 				4DA3900120DAF77400AD85F8 /* NSNumberFormatter+Utils.swift in Sources */,

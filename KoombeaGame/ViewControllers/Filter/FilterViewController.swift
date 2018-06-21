@@ -14,8 +14,12 @@ class FilterViewController: UIViewController {
     
     var headers = ["Sorting by","Rating","Sorting by"]
     var sortingBy = ["Popularity","New","Price"]
-    var rating = [5,4,3,2,1]
+    var rating = ["5","4","3","2","1"]
     var sortingBy2 = ["Nintendo","PlayStation","Xbox"]
+    
+    var sortingByString = String()
+    var ratingString = String()
+    var sortingBy2String = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,19 +106,21 @@ extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             let cell:FilterTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FilterTableViewCell
             cell.nameLabel.text = sortingBy[indexPath.row]
+            cell.delegate = self
             return cell
         case 1:
             let cell:RatingTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! RatingTableViewCell
             cell.config(rating: rating[indexPath.row])
+            cell.delegate = self
             return cell
         case 2:
             let cell:SortingByTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! SortingByTableViewCell
             cell.nameLabel.text = sortingBy2[indexPath.row]
-            
+            cell.delegate = self
             return cell
         default:
             let cell:ApplyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell4", for: indexPath) as! ApplyTableViewCell
-            
+            cell.delegate = self
             
             return cell
         }
@@ -131,4 +137,70 @@ extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         
     }
+}
+
+extension FilterViewController: FilterTableViewCellDelegate, RatingTableViewCellDelegate, SortingByTableViewCellDelegate, ApplyTableViewCellDelegate {
+    
+    func applyTableViewCellDidSelect() {
+        let nextView = FilteringResultsViewController()
+        nextView.sortingByCategory = sortingByString
+        nextView.sortingByBrand = sortingBy2String
+        nextView.rating = ratingString
+        let navigationController = UINavigationController.init(rootViewController: nextView)
+        navigationController.navigationBar.isTranslucent = false
+        self.present(navigationController, animated: true, completion: nil)
+    }
+    
+    
+    func sortingByTableViewCellDidSelect(brand: String) {
+        sortingBy2String = brand
+        
+        let myIndex = sortingBy2.index(of: brand)
+        
+        for i in sortingBy2 {
+            let index = sortingBy2.index(of: i)
+            if index != myIndex {
+                let indexPath = IndexPath(row: index!, section: 2)
+                let cell = self.tableView.cellForRow(at: indexPath) as! SortingByTableViewCell
+                cell.radioButton.setImage(#imageLiteral(resourceName: "emptyCircle"), for: .normal)
+                cell.check = false
+            }
+        }
+    }
+    
+   
+    func ratingTableViewCellDidSelect(rating: String) {
+        ratingString = rating
+        
+        let myIndex = self.rating.index(of: rating)
+        
+        for i in self.rating {
+            let index = self.rating.index(of: i)
+            if index != myIndex {
+                let indexPath = IndexPath(row: index!, section: 1)
+                let cell = self.tableView.cellForRow(at: indexPath) as! RatingTableViewCell
+                cell.radioButton.setImage(#imageLiteral(resourceName: "emptyCircle"), for: .normal)
+                cell.check = false
+            }
+        }
+        
+    }
+    
+    
+    func filterTableViewCellDidSelect(category: String) {
+        sortingByString = category
+        let myIndex = sortingBy.index(of: category)
+        
+        for i in sortingBy {
+            let index = sortingBy.index(of: i)
+            if index != myIndex {
+                let indexPath = IndexPath(row: index!, section: 0)
+                let cell = self.tableView.cellForRow(at: indexPath) as! FilterTableViewCell
+                cell.radioButton.setImage(#imageLiteral(resourceName: "emptyCircle"), for: .normal)
+                cell.check = false
+            }
+        }
+    }
+    
+    
 }

@@ -8,12 +8,17 @@
 
 import UIKit
 
+protocol SortingByTableViewCellDelegate: class {
+    func sortingByTableViewCellDidSelect(brand: String)
+}
+
 class SortingByTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var radioButton: UIButton!
     
     var check = false
+    var delegate : SortingByTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,6 +36,7 @@ class SortingByTableViewCell: UITableViewCell {
             check = !check
             let checkImage: UIImage? = #imageLiteral(resourceName: "radio-on-button (1)").withRenderingMode(.alwaysOriginal)
             radioButton.setImage(checkImage, for: .normal)
+            delegate?.sortingByTableViewCellDidSelect(brand: nameLabel.text!)
         }else{
             check = !check
             let checkImage: UIImage? = #imageLiteral(resourceName: "emptyCircle").withRenderingMode(.alwaysOriginal)

@@ -55,6 +55,14 @@ class DashboardViewController: UIViewController {
         DataService.shared.loadGame { (error, games) in
             if let e = error {
                 print(e)
+                do {
+                    let realm = try Realm()
+                    let games = realm.objects(Game.self)
+                    self.games = games.map { $0 }
+                    self.tableView.reloadData()
+                } catch {
+                    print(error.localizedDescription)
+                }
             }else {
                 self.games = games.map { $0 }!
                 self.tableView.reloadData()

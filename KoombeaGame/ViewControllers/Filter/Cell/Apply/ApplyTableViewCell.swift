@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol ApplyTableViewCellDelegate: class {
+    func applyTableViewCellDidSelect()
+}
+
 class ApplyTableViewCell: UITableViewCell {
 
+    var delegate : ApplyTableViewCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,5 +28,6 @@ class ApplyTableViewCell: UITableViewCell {
     }
     
     @IBAction func apply(_ sender: Any) {
+        delegate?.applyTableViewCellDidSelect()
     }
 }

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol RatingTableViewCellDelegate: class {
+    func ratingTableViewCellDidSelect(rating: String)
+}
+
 class RatingTableViewCell: UITableViewCell {
 
     @IBOutlet weak var radioButton: UIButton!
@@ -18,6 +22,8 @@ class RatingTableViewCell: UITableViewCell {
     @IBOutlet weak var star5: UIImageView!
     
     var check = false
+    var delegate : RatingTableViewCellDelegate?
+    var rating = String()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,37 +36,38 @@ class RatingTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func config(rating: Int) {
+    func config(rating: String) {
+        self.rating = rating
         switch rating {
-        case 1:
+        case "1":
             self.star1.image = #imageLiteral(resourceName: "starYellow")
             self.star2.image = #imageLiteral(resourceName: "starEmptyYellow")
             self.star3.image = #imageLiteral(resourceName: "starEmptyYellow")
             self.star4.image = #imageLiteral(resourceName: "starEmptyYellow")
             self.star5.image = #imageLiteral(resourceName: "starEmptyYellow")
             break
-        case 2:
+        case "2":
             self.star1.image = #imageLiteral(resourceName: "starYellow")
             self.star2.image = #imageLiteral(resourceName: "starYellow")
             self.star3.image = #imageLiteral(resourceName: "starEmptyYellow")
             self.star4.image = #imageLiteral(resourceName: "starEmptyYellow")
             self.star5.image = #imageLiteral(resourceName: "starEmptyYellow")
             break
-        case 3:
+        case "3":
             self.star1.image = #imageLiteral(resourceName: "starYellow")
             self.star2.image = #imageLiteral(resourceName: "starYellow")
             self.star3.image = #imageLiteral(resourceName: "starYellow")
             self.star4.image = #imageLiteral(resourceName: "starEmptyYellow")
             self.star5.image = #imageLiteral(resourceName: "starEmptyYellow")
             break
-        case 4:
+        case "4":
             self.star1.image = #imageLiteral(resourceName: "starYellow")
             self.star2.image = #imageLiteral(resourceName: "starYellow")
             self.star3.image = #imageLiteral(resourceName: "starYellow")
             self.star4.image = #imageLiteral(resourceName: "starYellow")
             self.star5.image = #imageLiteral(resourceName: "starEmptyYellow")
             break
-        case 5:
+        case "5":
             self.star1.image = #imageLiteral(resourceName: "starYellow")
             self.star2.image = #imageLiteral(resourceName: "starYellow")
             self.star3.image = #imageLiteral(resourceName: "starYellow")
@@ -81,6 +88,7 @@ class RatingTableViewCell: UITableViewCell {
             check = !check
             let checkImage: UIImage? = #imageLiteral(resourceName: "radio-on-button (1)").withRenderingMode(.alwaysOriginal)
             radioButton.setImage(checkImage, for: .normal)
+            delegate?.ratingTableViewCellDidSelect(rating: self.rating)
         }else{
             check = !check
             let checkImage: UIImage? = #imageLiteral(resourceName: "emptyCircle").withRenderingMode(.alwaysOriginal)
