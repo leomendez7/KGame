@@ -33,14 +33,14 @@ class DashboardViewController: UIViewController {
     }
     
     func setNavigationBar(){
+        title = "Games"
+        navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.barTintColor = UIColor.white
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.tintColor = UIColor.black
-        let rightBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "search_icon"), style: .plain, target: self, action: #selector(self.filter(_:)))
+        let rightBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "menubutton").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(self.filter(_:)))
         self.navigationItem.rightBarButtonItem = rightBarButton
         self.tabBarController?.tabBar.isHidden = true
-        let leftBarButton = UIBarButtonItem(title: "Game", style: .plain, target: self, action: nil)
-        self.navigationItem.leftBarButtonItem = leftBarButton
     }
     
     @objc func filter(_ sender: UIBarButtonItem) {

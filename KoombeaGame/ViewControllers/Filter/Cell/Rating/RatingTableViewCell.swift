@@ -9,7 +9,7 @@
 import UIKit
 
 protocol RatingTableViewCellDelegate: class {
-    func ratingTableViewCellDidSelect(rating: String)
+    func ratingTableViewCellDidSelect(rating: String, moreOrLess: Bool)
 }
 
 class RatingTableViewCell: UITableViewCell {
@@ -88,11 +88,12 @@ class RatingTableViewCell: UITableViewCell {
             check = !check
             let checkImage: UIImage? = #imageLiteral(resourceName: "radio-on-button (1)").withRenderingMode(.alwaysOriginal)
             radioButton.setImage(checkImage, for: .normal)
-            delegate?.ratingTableViewCellDidSelect(rating: self.rating)
+            delegate?.ratingTableViewCellDidSelect(rating: self.rating, moreOrLess: true)
         }else{
             check = !check
             let checkImage: UIImage? = #imageLiteral(resourceName: "emptyCircle").withRenderingMode(.alwaysOriginal)
             radioButton.setImage(checkImage, for: .normal)
+            delegate?.ratingTableViewCellDidSelect(rating: self.rating, moreOrLess: false)
         }
     }
     

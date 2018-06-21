@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SortingByTableViewCellDelegate: class {
-    func sortingByTableViewCellDidSelect(brand: String)
+    func sortingByTableViewCellDidSelect(brand: String, moreOrLess: Bool)
 }
 
 class SortingByTableViewCell: UITableViewCell {
@@ -36,11 +36,12 @@ class SortingByTableViewCell: UITableViewCell {
             check = !check
             let checkImage: UIImage? = #imageLiteral(resourceName: "radio-on-button (1)").withRenderingMode(.alwaysOriginal)
             radioButton.setImage(checkImage, for: .normal)
-            delegate?.sortingByTableViewCellDidSelect(brand: nameLabel.text!)
+            delegate?.sortingByTableViewCellDidSelect(brand: nameLabel.text!, moreOrLess: true)
         }else{
             check = !check
             let checkImage: UIImage? = #imageLiteral(resourceName: "emptyCircle").withRenderingMode(.alwaysOriginal)
             radioButton.setImage(checkImage, for: .normal)
+            delegate?.sortingByTableViewCellDidSelect(brand: nameLabel.text!, moreOrLess: false)
         }
     }
 }

@@ -15,7 +15,7 @@ class FilterViewController: UIViewController {
     var headers = ["Sorting by","Rating","Sorting by"]
     var sortingBy = ["Popularity","New","Price"]
     var rating = ["5","4","3","2","1"]
-    var sortingBy2 = ["Nintendo","PlayStation","Xbox"]
+    var sortingBy2 = ["Nintendo","PlayStation","Xbox","PC"]
     
     var sortingByString = String()
     var ratingString = String()
@@ -91,12 +91,18 @@ extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 1 {
-            return 5
-        }else if section == 3{
+        
+        switch section {
+        case 0:
+            return self.sortingBy.count
+        case 1:
+            return self.rating.count
+        case 2:
+            return self.sortingBy2.count
+        case 3:
             return 1
-        }else{
-            return 3
+        default:
+            return 0
         }
     }
     
@@ -152,55 +158,64 @@ extension FilterViewController: FilterTableViewCellDelegate, RatingTableViewCell
     }
     
     
-    func sortingByTableViewCellDidSelect(brand: String) {
-        sortingBy2String = brand
-        
-        let myIndex = sortingBy2.index(of: brand)
-        
-        for i in sortingBy2 {
-            let index = sortingBy2.index(of: i)
-            if index != myIndex {
-                let indexPath = IndexPath(row: index!, section: 2)
-                let cell = self.tableView.cellForRow(at: indexPath) as! SortingByTableViewCell
-                cell.radioButton.setImage(#imageLiteral(resourceName: "emptyCircle"), for: .normal)
-                cell.check = false
+    func sortingByTableViewCellDidSelect(brand: String, moreOrLess: Bool) {
+        if moreOrLess == true {
+            sortingBy2String = brand
+            
+            let myIndex = sortingBy2.index(of: brand)
+            
+            for i in sortingBy2 {
+                let index = sortingBy2.index(of: i)
+                if index != myIndex {
+                    let indexPath = IndexPath(row: index!, section: 2)
+                    let cell = self.tableView.cellForRow(at: indexPath) as! SortingByTableViewCell
+                    cell.radioButton.setImage(#imageLiteral(resourceName: "emptyCircle"), for: .normal)
+                    cell.check = false
+                }
             }
+        }else{
+            sortingBy2String = ""
         }
     }
     
    
-    func ratingTableViewCellDidSelect(rating: String) {
-        ratingString = rating
-        
-        let myIndex = self.rating.index(of: rating)
-        
-        for i in self.rating {
-            let index = self.rating.index(of: i)
-            if index != myIndex {
-                let indexPath = IndexPath(row: index!, section: 1)
-                let cell = self.tableView.cellForRow(at: indexPath) as! RatingTableViewCell
-                cell.radioButton.setImage(#imageLiteral(resourceName: "emptyCircle"), for: .normal)
-                cell.check = false
+    func ratingTableViewCellDidSelect(rating: String, moreOrLess: Bool) {
+        if moreOrLess == true {
+            ratingString = rating
+            
+            let myIndex = self.rating.index(of: rating)
+            
+            for i in self.rating {
+                let index = self.rating.index(of: i)
+                if index != myIndex {
+                    let indexPath = IndexPath(row: index!, section: 1)
+                    let cell = self.tableView.cellForRow(at: indexPath) as! RatingTableViewCell
+                    cell.radioButton.setImage(#imageLiteral(resourceName: "emptyCircle"), for: .normal)
+                    cell.check = false
+                }
             }
-        }
-        
-    }
-    
-    
-    func filterTableViewCellDidSelect(category: String) {
-        sortingByString = category
-        let myIndex = sortingBy.index(of: category)
-        
-        for i in sortingBy {
-            let index = sortingBy.index(of: i)
-            if index != myIndex {
-                let indexPath = IndexPath(row: index!, section: 0)
-                let cell = self.tableView.cellForRow(at: indexPath) as! FilterTableViewCell
-                cell.radioButton.setImage(#imageLiteral(resourceName: "emptyCircle"), for: .normal)
-                cell.check = false
-            }
+        }else{
+            ratingString = ""
         }
     }
     
     
+    func filterTableViewCellDidSelect(category: String, moreOrLess: Bool) {
+        if moreOrLess == true {
+            sortingByString = category
+            let myIndex = sortingBy.index(of: category)
+            
+            for i in sortingBy {
+                let index = sortingBy.index(of: i)
+                if index != myIndex {
+                    let indexPath = IndexPath(row: index!, section: 0)
+                    let cell = self.tableView.cellForRow(at: indexPath) as! FilterTableViewCell
+                    cell.radioButton.setImage(#imageLiteral(resourceName: "emptyCircle"), for: .normal)
+                    cell.check = false
+                }
+            }
+        }else{
+            sortingByString = ""
+        }
+    }
 }

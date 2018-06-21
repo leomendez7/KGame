@@ -46,6 +46,7 @@ class ImageDetailsViewController: UIViewController, UIScrollViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         UIApplication.shared.isStatusBarHidden = true
+        self.navigationController?.navigationBar.tintColor = UIColor.KGPurpleColor()
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {

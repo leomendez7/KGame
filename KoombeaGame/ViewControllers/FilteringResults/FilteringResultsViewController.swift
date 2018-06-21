@@ -25,6 +25,11 @@ class FilteringResultsViewController: UIViewController {
         createTable()
         info()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.tintColor = UIColor.KGPurpleColor()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -35,7 +40,6 @@ class FilteringResultsViewController: UIViewController {
         title = "Games"
         navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.tintColor = UIColor.KGPurpleColor()
         let closeButton = UIBarButtonItem(title: "Clear  Filters", style: .plain, target: self, action: #selector(self.close(_:)))
         self.navigationItem.rightBarButtonItem = closeButton
         self.tabBarController?.tabBar.isHidden = true
@@ -49,88 +53,277 @@ class FilteringResultsViewController: UIViewController {
         do {
             let realm = try Realm()
             var predicate = NSPredicate()
-            //let games = realm.objects(Game.self)
             
             if sortingByCategory == "Popularity" {
                 if rating == "5" && sortingByBrand == "" {
-                   predicate = NSPredicate(format: "rating = %@ AND rating = %@ AND rating = %@ AND rating = %@ AND rating = %@", "5", "4", "3", "2", "1")
+                   predicate = NSPredicate(format: "rating = %@ OR rating = %@ OR rating = %@ OR rating = %@ OR rating = %@", "5", "4", "3", "2", "1")
                     let games = realm.objects(Game.self).filter(predicate)
                     self.games = games
-                        .sorted { return ($0.downloads! < $1.downloads!) }
+                        .sorted { return ($0.downloads! > $1.downloads!) }
                         .map { return $0 }
                 }else if rating == "4" && sortingByBrand == "" {
-                    predicate = NSPredicate(format: "rating = %@ AND rating = %@ AND rating = %@ AND rating = %@", "4", "3", "2", "1")
+                    predicate = NSPredicate(format: "rating = %@ OR rating = %@ OR rating = %@ OR rating = %@", "4", "3", "2", "1")
                     let games = realm.objects(Game.self).filter(predicate)
                     self.games = games
-                        .sorted { return ($0.downloads! < $1.downloads!) }
+                        .sorted { return ($0.downloads! > $1.downloads!) }
                         .map { return $0 }
                 }else if rating == "3" && sortingByBrand == "" {
-                    predicate = NSPredicate(format: "rating = %@ AND rating = %@ AND rating = %@", "3", "2", "1")
+                    predicate = NSPredicate(format: "rating = %@ OR rating = %@ OR rating = %@", "3", "2", "1")
                     let games = realm.objects(Game.self).filter(predicate)
                     self.games = games
-                        .sorted { return ($0.downloads! < $1.downloads!) }
+                        .sorted { return ($0.downloads! > $1.downloads!) }
                         .map { return $0 }
                 }else if rating == "2" && sortingByBrand == "" {
-                    predicate = NSPredicate(format: "rating = %@ AND rating = %@", "2", "1")
+                    predicate = NSPredicate(format: "rating = %@ OR rating = %@", "2", "1")
                     let games = realm.objects(Game.self).filter(predicate)
                     self.games = games
-                        .sorted { return ($0.downloads! < $1.downloads!) }
+                        .sorted { return ($0.downloads! > $1.downloads!) }
                         .map { return $0 }
                 }else if rating == "1" && sortingByBrand == "" {
-                    predicate = NSPredicate(format: "rating = 1", "1")
+                    predicate = NSPredicate(format: "rating = %@", "1")
                     let games = realm.objects(Game.self).filter(predicate)
                     self.games = games
-                        .sorted { return ($0.downloads! < $1.downloads!) }
+                        .sorted { return ($0.downloads! > $1.downloads!) }
                         .map { return $0 }
                 }else if rating == "5" && sortingByBrand != "" {
-                    predicate = NSPredicate(format: "rating = %@ AND rating = %@ AND rating = %@ AND rating = %@ AND rating = %@ AND brand = %@", "5", "4", "3", "2", "1", sortingByBrand)
+                    predicate = NSPredicate(format: "rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@", "5", sortingByBrand, "4", sortingByBrand, "3", sortingByBrand, "2", sortingByBrand, "1", sortingByBrand)
                     let games = realm.objects(Game.self).filter(predicate)
                     self.games = games
-                        .sorted { return ($0.downloads! < $1.downloads!) }
+                        .sorted { return ($0.downloads! > $1.downloads!) }
                         .map { return $0 }
                 }else if rating == "4" && sortingByBrand != "" {
-                    predicate = NSPredicate(format: "rating = %@ AND rating = %@ AND rating = %@ AND rating = %@ AND brand = %@", "4", "3", "2", "1", sortingByBrand)
+                    predicate = NSPredicate(format: "rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@", "4", sortingByBrand, "3", sortingByBrand, "2", sortingByBrand, "1", sortingByBrand)
                     let games = realm.objects(Game.self).filter(predicate)
                     self.games = games
-                        .sorted { return ($0.downloads! < $1.downloads!) }
+                        .sorted { return ($0.downloads! > $1.downloads!) }
                         .map { return $0 }
                 }else if rating == "3" && sortingByBrand != "" {
-                    predicate = NSPredicate(format: "rating = %@ AND rating = %@ AND rating = %@ AND brand = %@", "3", "2", "1", sortingByBrand)
+                    predicate = NSPredicate(format: "rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@", "3", sortingByBrand, "2", sortingByBrand, "1", sortingByBrand)
                     let games = realm.objects(Game.self).filter(predicate)
                     self.games = games
-                        .sorted { return ($0.downloads! < $1.downloads!) }
+                        .sorted { return ($0.downloads! > $1.downloads!) }
                         .map { return $0 }
                 }else if rating == "2" && sortingByBrand != "" {
-                    predicate = NSPredicate(format: "rating = %@ AND rating = %@ AND brand = %@",  "2", "1", sortingByBrand)
+                    predicate = NSPredicate(format: "rating = %@ AND brand = %@ OR rating = %@ AND brand = %@",  "2", sortingByBrand, "1", sortingByBrand)
                     let games = realm.objects(Game.self).filter(predicate)
                     self.games = games
-                        .sorted { return ($0.downloads! < $1.downloads!) }
+                        .sorted { return ($0.downloads! > $1.downloads!) }
                         .map { return $0 }
                 }else if rating == "1" && sortingByBrand != "" {
                     predicate = NSPredicate(format: "rating = %@ AND brand = %@", "1", sortingByBrand)
                     let games = realm.objects(Game.self).filter(predicate)
                     self.games = games
-                        .sorted { return ($0.downloads! < $1.downloads!) }
+                        .sorted { return ($0.downloads! > $1.downloads!) }
+                        .map { return $0 }
+                }else if rating == "" && sortingByBrand != "" {
+                    predicate = NSPredicate(format: "brand = %@", sortingByBrand)
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.downloads! > $1.downloads!) }
+                        .map { return $0 }
+                }else if rating == "" && sortingByBrand == "" {
+                    let games = realm.objects(Game.self)
+                    self.games = games
+                        .sorted { return ($0.downloads! > $1.downloads!) }
                         .map { return $0 }
                 }
             }else if sortingByCategory == "New" {
-                self.games = games
-                    .sorted { return ($0.createdAt! < $1.createdAt!) }
-                    .map { return $0 }
+                if rating == "5" && sortingByBrand == "" {
+                    predicate = NSPredicate(format: "rating = %@ OR rating = %@ OR rating = %@ OR rating = %@ OR rating = %@", "5", "4", "3", "2", "1")
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.createdAt! > $1.createdAt!) }
+                        .map { return $0 }
+                }else if rating == "4" && sortingByBrand == "" {
+                    predicate = NSPredicate(format: "rating = %@ OR rating = %@ OR rating = %@ OR rating = %@", "4", "3", "2", "1")
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.createdAt! > $1.createdAt!) }
+                        .map { return $0 }
+                }else if rating == "3" && sortingByBrand == "" {
+                    predicate = NSPredicate(format: "rating = %@ OR rating = %@ OR rating = %@", "3", "2", "1")
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.createdAt! > $1.createdAt!) }
+                        .map { return $0 }
+                }else if rating == "2" && sortingByBrand == "" {
+                    predicate = NSPredicate(format: "rating = %@ OR rating = %@", "2", "1")
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.createdAt! > $1.createdAt!) }
+                        .map { return $0 }
+                }else if rating == "1" && sortingByBrand == "" {
+                    predicate = NSPredicate(format: "rating = %@", "1")
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.createdAt! > $1.createdAt!) }
+                        .map { return $0 }
+                }else if rating == "5" && sortingByBrand != "" {
+                    predicate = NSPredicate(format: "rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@", "5", sortingByBrand, "4", sortingByBrand, "3", sortingByBrand, "2", sortingByBrand, "1", sortingByBrand)
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.createdAt! > $1.createdAt!) }
+                        .map { return $0 }
+                }else if rating == "4" && sortingByBrand != "" {
+                    predicate = NSPredicate(format: "rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@", "4", sortingByBrand, "3", sortingByBrand, "2", sortingByBrand, "1", sortingByBrand)
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.createdAt! > $1.createdAt!) }
+                        .map { return $0 }
+                }else if rating == "3" && sortingByBrand != "" {
+                    predicate = NSPredicate(format: "rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@", "3", sortingByBrand, "2", sortingByBrand, "1", sortingByBrand)
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.createdAt! > $1.createdAt!) }
+                        .map { return $0 }
+                }else if rating == "2" && sortingByBrand != "" {
+                    predicate = NSPredicate(format: "rating = %@ AND brand = %@ OR rating = %@ AND brand = %@",  "2", sortingByBrand, "1", sortingByBrand)
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.createdAt! > $1.createdAt!) }
+                        .map { return $0 }
+                }else if rating == "1" && sortingByBrand != "" {
+                    predicate = NSPredicate(format: "rating = %@ AND brand = %@", "1", sortingByBrand)
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.createdAt! > $1.createdAt!) }
+                        .map { return $0 }
+                }else if rating == "" && sortingByBrand != "" {
+                    predicate = NSPredicate(format: "brand = %@", sortingByBrand)
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.createdAt! > $1.createdAt!) }
+                        .map { return $0 }
+                }else if rating == "" && sortingByBrand == "" {
+                    let games = realm.objects(Game.self)
+                    self.games = games
+                        .sorted { return ($0.createdAt! > $1.createdAt!) }
+                        .map { return $0 }
+                }
             }else if sortingByCategory == "Price" {
-                self.games = games
-                    .sorted { return ($0.price! < $1.price!) }
-                    .map { return $0 }
-            }else {
-                let games = realm.objects(Game.self)
-                self.games = games.map { $0 }
+                if rating == "5" && sortingByBrand == "" {
+                    predicate = NSPredicate(format: "rating = %@ OR rating = %@ OR rating = %@ OR rating = %@ OR rating = %@", "5", "4", "3", "2", "1")
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.price! > $1.price!) }
+                        .map { return $0 }
+                }else if rating == "4" && sortingByBrand == "" {
+                    predicate = NSPredicate(format: "rating = %@ OR rating = %@ OR rating = %@ OR rating = %@", "4", "3", "2", "1")
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.price! > $1.price!) }
+                        .map { return $0 }
+                }else if rating == "3" && sortingByBrand == "" {
+                    predicate = NSPredicate(format: "rating = %@ OR rating = %@ OR rating = %@", "3", "2", "1")
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.price! > $1.price!) }
+                        .map { return $0 }
+                }else if rating == "2" && sortingByBrand == "" {
+                    predicate = NSPredicate(format: "rating = %@ OR rating = %@", "2", "1")
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.price! > $1.price!) }
+                        .map { return $0 }
+                }else if rating == "1" && sortingByBrand == "" {
+                    predicate = NSPredicate(format: "rating = %@", "1")
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.price! > $1.price!) }
+                        .map { return $0 }
+                }else if rating == "5" && sortingByBrand != "" {
+                    predicate = NSPredicate(format: "rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@", "5", sortingByBrand, "4", sortingByBrand, "3", sortingByBrand, "2", sortingByBrand, "1", sortingByBrand)
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.price! > $1.price!) }
+                        .map { return $0 }
+                }else if rating == "4" && sortingByBrand != "" {
+                    predicate = NSPredicate(format: "rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@", "4", sortingByBrand, "3", sortingByBrand, "2", sortingByBrand, "1", sortingByBrand)
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.price! > $1.price!) }
+                        .map { return $0 }
+                }else if rating == "3" && sortingByBrand != "" {
+                    predicate = NSPredicate(format: "rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@", "3", sortingByBrand, "2", sortingByBrand, "1", sortingByBrand)
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.price! > $1.price!) }
+                        .map { return $0 }
+                }else if rating == "2" && sortingByBrand != "" {
+                    predicate = NSPredicate(format: "rating = %@ AND brand = %@ OR rating = %@ AND brand = %@",  "2", sortingByBrand, "1", sortingByBrand)
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.price! > $1.price!) }
+                        .map { return $0 }
+                }else if rating == "1" && sortingByBrand != "" {
+                    predicate = NSPredicate(format: "rating = %@ AND brand = %@", "1", sortingByBrand)
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.price! > $1.price!) }
+                        .map { return $0 }
+                }else if rating == "" && sortingByBrand != "" {
+                    predicate = NSPredicate(format: "brand = %@", sortingByBrand)
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games
+                        .sorted { return ($0.price! > $1.price!) }
+                        .map { return $0 }
+                }else if rating == "" && sortingByBrand == "" {
+                    let games = realm.objects(Game.self)
+                    self.games = games
+                        .sorted { return ($0.price! > $1.price!) }
+                        .map { return $0 }
+                }
+            }else{
+                if rating == "5" && sortingByBrand == "" {
+                    predicate = NSPredicate(format: "rating = %@ OR rating = %@ OR rating = %@ OR rating = %@ OR rating = %@", "5", "4", "3", "2", "1")
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games.map { $0 }
+                }else if rating == "4" && sortingByBrand == "" {
+                    predicate = NSPredicate(format: "rating = %@ OR rating = %@ OR rating = %@ OR rating = %@", "4", "3", "2", "1")
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games.map { $0 }
+                }else if rating == "3" && sortingByBrand == "" {
+                    predicate = NSPredicate(format: "rating = %@ OR rating = %@ OR rating = %@", "3", "2", "1")
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games.map { $0 }
+                }else if rating == "2" && sortingByBrand == "" {
+                    predicate = NSPredicate(format: "rating = %@ OR rating = %@", "2", "1")
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games.map { $0 }
+                }else if rating == "1" && sortingByBrand == "" {
+                    predicate = NSPredicate(format: "rating = 1", "1")
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games.map { $0 }
+                }else if rating == "5" && sortingByBrand != "" {
+                    predicate = NSPredicate(format: "rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@", "5", sortingByBrand, "4", sortingByBrand, "3", sortingByBrand, "2", sortingByBrand, "1", sortingByBrand)
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games.map { $0 }
+                }else if rating == "4" && sortingByBrand != "" {
+                    predicate = NSPredicate(format: "rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@", "4", sortingByBrand, "3", sortingByBrand, "2", sortingByBrand, "1", sortingByBrand)
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games.map { $0 }
+                }else if rating == "3" && sortingByBrand != "" {
+                    predicate = NSPredicate(format: "rating = %@ AND brand = %@ OR rating = %@ AND brand = %@ OR rating = %@ AND brand = %@", "3", sortingByBrand, "2", sortingByBrand, "1", sortingByBrand)
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games.map { $0 }
+                }else if rating == "2" && sortingByBrand != "" {
+                    predicate = NSPredicate(format: "rating = %@ AND brand = %@ OR rating = %@ AND brand = %@",  "2", sortingByBrand, "1", sortingByBrand)
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games.map { $0 }
+                }else if rating == "1" && sortingByBrand != "" {
+                    predicate = NSPredicate(format: "rating = %@ AND brand = %@", "1", sortingByBrand)
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games.map { $0 }
+                }else if rating == "" && sortingByBrand != "" {
+                    predicate = NSPredicate(format: "brand = %@", sortingByBrand)
+                    let games = realm.objects(Game.self).filter(predicate)
+                    self.games = games.map { $0 }
+                }else if sortingByCategory == "" && rating == "" && sortingByBrand == "" {
+                    let games = realm.objects(Game.self)
+                    self.games = games.map { $0 }
+                }
             }
             
-            
-            
-            
-//            self.games.removeAll()
-//            self.games = games.map { $0 }
 
             filteredResultsLabel.text = "Filtered results (\(self.games.count))"
             self.collectionView.reloadData()
@@ -182,5 +375,8 @@ extension FilteringResultsViewController: UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let nextView = DetailViewController()
+        nextView.game = games[indexPath.row]
+        self.navigationController?.pushViewController(nextView, animated: true)
     }
 }

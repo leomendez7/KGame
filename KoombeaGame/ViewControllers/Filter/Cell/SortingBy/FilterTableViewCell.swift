@@ -9,7 +9,7 @@
 import UIKit
 
 protocol FilterTableViewCellDelegate: class {
-    func filterTableViewCellDidSelect(category: String)
+    func filterTableViewCellDidSelect(category: String, moreOrLess: Bool)
 }
 
 class FilterTableViewCell: UITableViewCell {
@@ -31,12 +31,6 @@ class FilterTableViewCell: UITableViewCell {
     
     func config(category: String) {
         self.nameLabel.text = category
-        if category == "Popularity" {
-            check = !check
-            let checkImage: UIImage? = #imageLiteral(resourceName: "radio-on-button (1)").withRenderingMode(.alwaysOriginal)
-            radioButton.setImage(checkImage, for: .normal)
-            delegate?.filterTableViewCellDidSelect(category: self.nameLabel.text!)
-        }
     }
     
     
@@ -45,11 +39,12 @@ class FilterTableViewCell: UITableViewCell {
             check = !check
             let checkImage: UIImage? = #imageLiteral(resourceName: "radio-on-button (1)").withRenderingMode(.alwaysOriginal)
             radioButton.setImage(checkImage, for: .normal)
-            delegate?.filterTableViewCellDidSelect(category: self.nameLabel.text!)
+            delegate?.filterTableViewCellDidSelect(category: self.nameLabel.text!, moreOrLess: true)
         }else{
             check = !check
             let checkImage: UIImage? = #imageLiteral(resourceName: "emptyCircle").withRenderingMode(.alwaysOriginal)
             radioButton.setImage(checkImage, for: .normal)
+            delegate?.filterTableViewCellDidSelect(category: self.nameLabel.text!, moreOrLess: false)
         }
     }
     
