@@ -9,7 +9,7 @@
 import UIKit
 
 protocol DashboardTableViewCellDelegate: class {
-    func DashboardTableViewCellDidSelect()
+    func DashboardTableViewCellDidSelect(brands: String)
 }
 
 class DashboardTableViewCell: UITableViewCell {
@@ -17,6 +17,7 @@ class DashboardTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var brands = ["All","Nintendo","PlayStation","Xbox", "PC"]
+    var delegate : DashboardTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -72,6 +73,6 @@ extension DashboardTableViewCell: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        delegate?.DashboardTableViewCellDidSelect(brands: self.brands[indexPath.row])
     }
 }

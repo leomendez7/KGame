@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import RealmSwift
 import IQKeyboardManagerSwift
+import Tamamushi
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         migrationRealm()
         
         if Session.sessionViewed() == true {
+            TMGradientNavigationBar().setInitialBarGradientColor(direction: .vertical, typeName: "SoundCloud")
             let mainView = DashboardViewController()
             let navigationController = UINavigationController.init(rootViewController: mainView)
             navigationController.navigationBar.isTranslucent = false
@@ -32,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             self.window?.backgroundColor = UIColor .white
             self.window!.makeKeyAndVisible()
-            UIApplication.shared.statusBarStyle = .lightContent
+            UIApplication.shared.statusBarStyle = .default
         }else{
             let mainView = Walkthrough1ViewController()
             let navigationController = UINavigationController.init(rootViewController: mainView)
@@ -51,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let config = Realm.Configuration(
             // Set the new schema version. This must be greater than the previously used
             // version (if you've never set a schema version before, the version is 0).
-            schemaVersion: 16,
+            schemaVersion: 0,
             
             // Set the block which will be called automatically when opening a Realm with
             // a schema version lower than the one set above

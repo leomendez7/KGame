@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DashboardCollectionViewCell2: UICollectionViewCell {
 
@@ -39,7 +40,9 @@ class DashboardCollectionViewCell2: UICollectionViewCell {
             }
             var placeholderImage = UIImage()
             placeholderImage = #imageLiteral(resourceName: "noArticles")
-            gameImageView.af_setImage(withURL: url, placeholderImage: placeholderImage, imageTransition: .crossDissolve(0.2))
+            
+            self.gameImageView.kf.indicatorType = .activity
+            self.gameImageView.af_setImage(withURL: url, placeholderImage: placeholderImage, imageTransition: .crossDissolve(0.2))
         }else{
             gameImageView.image = #imageLiteral(resourceName: "noArticles")
         }

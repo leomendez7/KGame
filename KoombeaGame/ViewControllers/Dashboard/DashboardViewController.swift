@@ -7,14 +7,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DashboardViewController: UIViewController {
 
-    
-    @IBOutlet weak var collectionView2: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
-    
-    
     
     var headers = ["","New","Poluar","All"]
     var games = [Game]()
@@ -24,6 +21,11 @@ class DashboardViewController: UIViewController {
         setNavigationBar()
         createTable()
         loadInfo()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.tintColor = UIColor.black
     }
 
     override func didReceiveMemoryWarning() {
@@ -104,7 +106,7 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         
         if indexPath.section == 0 {
             let cell:DashboardTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DashboardTableViewCell
-            
+            cell.delegate = self
             return cell
         }else{
             let cell:DashboardTableViewCell2 = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! DashboardTableViewCell2
@@ -113,10 +115,14 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
             case 1:
                 let new = games.sorted { $0.createdAt! < $1.createdAt! }
                 cell.games = new
-                cell.count = 5
+                if new.count < 5 {
+                    cell.count = new.count
+                }else{
+                    cell.count = 5
+                }
                 cell.collectionView.reloadData()
             case 2:
-                let popular = games.filter { $0.popular == true }
+                let popular = games.filter { $0.popular == "true" }
                 cell.games = popular
                 cell.count = popular.count
                 cell.collectionView.reloadData()
@@ -135,9 +141,16 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch section {
         case 1:
-            header.nameHeaderLabel.text = "\(headers[section]) (5)"
+            let new = games.sorted { $0.createdAt! < $1.createdAt! }
+            var count = 0
+            if new.count < 5 {
+                count = new.count
+            }else{
+                count = 5
+            }
+            header.nameHeaderLabel.text = "\(headers[section]) (\(count))"
         case 2:
-            let popular = games.filter { $0.popular == true }
+            let popular = games.filter { $0.popular == "true" }
             header.nameHeaderLabel.text = "\(headers[section]) (\(popular.count))"
         default:
             header.nameHeaderLabel.text = "\(headers[section]) (\(self.games.count))"
@@ -147,7 +160,32 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-extension DashboardViewController: DashboardTableViewCell2Delegate {
+extension DashboardViewController: DashboardTableViewCell2Delegate, DashboardTableViewCellDelegate {
+    
+    func DashboardTableViewCellDidSelect(brands: String) {
+        if brands == "All" {
+            do {
+                let realm = try Realm()
+                let games = realm.objects(Game.self)
+                self.games.removeAll()
+                self.games = games.map { $0 }
+                self.tableView.reloadData()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }else{
+            do {
+                let realm = try Realm()
+                let predicate = NSPredicate(format: "brand = %@ ", brands)
+                let games = realm.objects(Game.self).filter(predicate)
+                self.games.removeAll()
+                self.games = games.map { $0 }
+                self.tableView.reloadData()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
     
     func DashboardTableViewCell2DidSelect(game: Game) {
         let nextView = DetailViewController()

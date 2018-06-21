@@ -19,8 +19,10 @@
 		4D9349F920DAE38A00484F5B /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9349F720DAE38A00484F5B /* DetailViewController.xib */; };
 		4DA3900120DAF77400AD85F8 /* NSNumberFormatter+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3900020DAF77400AD85F8 /* NSNumberFormatter+Utils.swift */; };
 		AE5F89C8E9CDD10F152053A0 /* Pods_KoombeaGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC510561191E61D5B5F29F59 /* Pods_KoombeaGame.framework */; };
+		EC2C5B5F20DB38C4003357D2 /* ImageDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2C5B5D20DB38C4003357D2 /* ImageDetailsViewController.xib */; };
+		EC2C5B6020DB38C4003357D2 /* ImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B5E20DB38C4003357D2 /* ImageDetailsViewController.swift */; };
+		EC2C5B6220DB5123003357D2 /* UINavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B6120DB5123003357D2 /* UINavigationBarExtension.swift */; };
 		EC8D1B6420D9EE8500E1305A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1B6320D9EE8500E1305A /* AppDelegate.swift */; };
-		EC8D1B6620D9EE8500E1305A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1B6520D9EE8500E1305A /* ViewController.swift */; };
 		EC8D1B6920D9EE8500E1305A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC8D1B6720D9EE8500E1305A /* Main.storyboard */; };
 		EC8D1B6C20D9EE8500E1305A /* KoombeaGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1B6A20D9EE8500E1305A /* KoombeaGame.xcdatamodeld */; };
 		EC8D1B6E20D9EE8700E1305A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC8D1B6D20D9EE8700E1305A /* Assets.xcassets */; };
@@ -83,9 +85,11 @@
 		BC510561191E61D5B5F29F59 /* Pods_KoombeaGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoombeaGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF63FA0A5B6758B52BA239E7 /* Pods-KoombeaGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoombeaGame/Pods-KoombeaGame.debug.xcconfig"; sourceTree = "<group>"; };
 		D51928B015644190743EA6E9 /* Pods-KoombeaGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaGameTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoombeaGameTests/Pods-KoombeaGameTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EC2C5B5D20DB38C4003357D2 /* ImageDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageDetailsViewController.xib; sourceTree = "<group>"; };
+		EC2C5B5E20DB38C4003357D2 /* ImageDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewController.swift; sourceTree = "<group>"; };
+		EC2C5B6120DB5123003357D2 /* UINavigationBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBarExtension.swift; sourceTree = "<group>"; };
 		EC8D1B6020D9EE8500E1305A /* KoombeaGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoombeaGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC8D1B6320D9EE8500E1305A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC8D1B6520D9EE8500E1305A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC8D1B6820D9EE8500E1305A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC8D1B6B20D9EE8500E1305A /* KoombeaGame.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KoombeaGame.xcdatamodel; sourceTree = "<group>"; };
 		EC8D1B6D20D9EE8700E1305A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 		4D9349E120DA894300484F5B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EC2C5B6120DB5123003357D2 /* UINavigationBarExtension.swift */,
 				4DA3900020DAF77400AD85F8 /* NSNumberFormatter+Utils.swift */,
 				4D9349E220DA895B00484F5B /* ActivityIndicator.swift */,
 			);
@@ -201,6 +206,7 @@
 		4D9349F520DAE36100484F5B /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				EC2C5B5820DB3820003357D2 /* ImageDetails */,
 				4D9349F620DAE38A00484F5B /* DetailViewController.swift */,
 				4D9349F720DAE38A00484F5B /* DetailViewController.xib */,
 			);
@@ -230,6 +236,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EC2C5B5820DB3820003357D2 /* ImageDetails */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C5B5E20DB38C4003357D2 /* ImageDetailsViewController.swift */,
+				EC2C5B5D20DB38C4003357D2 /* ImageDetailsViewController.xib */,
+			);
+			path = ImageDetails;
+			sourceTree = "<group>";
+		};
 		EC8D1B5720D9EE8500E1305A = {
 			isa = PBXGroup;
 			children = (
@@ -255,12 +270,11 @@
 		EC8D1B6220D9EE8500E1305A /* KoombeaGame */ = {
 			isa = PBXGroup;
 			children = (
-				4D9349E120DA894300484F5B /* Utilities */,
 				EC8D1B9420D9F07C00E1305A /* Resources */,
 				EC8D1B9820D9F0CF00E1305A /* Base */,
 				EC8D1B9720D9F0B900E1305A /* Models */,
+				4D9349E120DA894300484F5B /* Utilities */,
 				EC8D1B9920D9F0E700E1305A /* ViewControllers */,
-				EC8D1B6520D9EE8500E1305A /* ViewController.swift */,
 				EC8D1B7220D9EE8700E1305A /* Info.plist */,
 				EC8D1B6A20D9EE8500E1305A /* KoombeaGame.xcdatamodeld */,
 			);
@@ -507,6 +521,7 @@
 				EC8D1BAA20D9F39900E1305A /* Walkthrough3ViewController.xib in Resources */,
 				EC8D1BB920DA137800E1305A /* DashboardViewController.xib in Resources */,
 				EC8D1B7120D9EE8700E1305A /* LaunchScreen.storyboard in Resources */,
+				EC2C5B5F20DB38C4003357D2 /* ImageDetailsViewController.xib in Resources */,
 				4D9349F920DAE38A00484F5B /* DetailViewController.xib in Resources */,
 				EC8D1B9620D9F09A00E1305A /* Default-568h@2x.png in Resources */,
 				EC8D1B6E20D9EE8700E1305A /* Assets.xcassets in Resources */,
@@ -545,9 +560,11 @@
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/InteractiveSideMenu/InteractiveSideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Tamamushi/Tamamushi.framework",
 				"${BUILT_PRODUCTS_DIR}/UIAlertController+Blocks/UIAlertController_Blocks.framework",
 				"${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework",
 			);
@@ -559,9 +576,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InteractiveSideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tamamushi.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIAlertController_Blocks.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex_Swift.framework",
 			);
@@ -631,7 +650,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC8D1B6620D9EE8500E1305A /* ViewController.swift in Sources */,
+				EC2C5B6020DB38C4003357D2 /* ImageDetailsViewController.swift in Sources */,
 				4D9349F820DAE38A00484F5B /* DetailViewController.swift in Sources */,
 				EC8D1BBE20DA198E00E1305A /* DashboardCollectionViewCell.swift in Sources */,
 				EC8D1B6420D9EE8500E1305A /* AppDelegate.swift in Sources */,
@@ -639,6 +658,7 @@
 				4D9349E320DA895B00484F5B /* ActivityIndicator.swift in Sources */,
 				4D9349F320DA9C9800484F5B /* DashboardTableViewCell2.swift in Sources */,
 				EC8D1BAD20D9F3CC00E1305A /* Walkthrough1ViewController.swift in Sources */,
+				EC2C5B6220DB5123003357D2 /* UINavigationBarExtension.swift in Sources */,
 				EC8D1BA420D9F38300E1305A /* Walkthrough2ViewController.swift in Sources */,
 				EC8D1BA920D9F39900E1305A /* Walkthrough3ViewController.swift in Sources */,
 				EC8D1B6C20D9EE8500E1305A /* KoombeaGame.xcdatamodeld in Sources */,

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Tamamushi
+import UIColor_Hex_Swift
 
 class DetailViewController: UIViewController {
 
@@ -29,13 +31,33 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         info(game: game!)
         star(rating: game?.rating ?? "")
+        tapGestureRecognizer()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.isStatusBarHidden = false
+        UIApplication.shared.statusBarStyle = .lightContent
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarStyle = .default
+        navigationController?.navigationBar.isHidden = false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
        
+    }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
     
     func info(game: Game) {
@@ -115,5 +137,33 @@ class DetailViewController: UIViewController {
             self.star5.image = #imageLiteral(resourceName: "star2")
         }
     }
+    
+    func tapGestureRecognizer() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ShowImage(tapGestureRecognizer:)))
+        gameImageView.isUserInteractionEnabled = true
+        gameImageView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func ShowImage(tapGestureRecognizer: UITapGestureRecognizer) {
+        UIView.animate(withDuration: 0.5, animations: {
+            let vc = ImageDetailsViewController()
+            vc.urlImg = self.game?.imageURL ?? ""
+            self.present(vc, animated: true, completion: nil)
+        })
+    }
+    
+    @IBAction func Back(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+}
 
+extension UIView {
+    
+    func applyGradientEfectInBackground(colors: [UIColor]) {
+        let gradient = CAGradientLayer()
+        gradient.frame = self.bounds
+        gradient.colors = colors.map { $0.cgColor }
+        layer.insertSublayer(gradient, at: 0)
+    }
+    
 }
