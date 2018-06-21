@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KoombeaGame/ViewControllers/Dashboard/DashboardViewController.swift"
-            timestampString = "551249114.765546"
+            timestampString = "551255275.476163"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "tableView(_:viewForHeaderInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KoombeaGame/ViewControllers/Dashboard/DashboardViewController.swift"
-            timestampString = "551249114.7661999"
+            timestampString = "551255275.476271"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
             landmarkName = "DashboardTableViewCellDidSelect(brands:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KoombeaGame/ViewControllers/Dashboard/DashboardViewController.swift"
-            timestampString = "551249114.7665401"
+            timestampString = "551255275.476357"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
             <Locations>

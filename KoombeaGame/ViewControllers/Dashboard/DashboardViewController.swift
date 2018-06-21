@@ -36,12 +36,18 @@ class DashboardViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor.white
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.tintColor = UIColor.black
-        let rightBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "search_icon"), style: .plain, target: self, action: nil)
+        let rightBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "search_icon"), style: .plain, target: self, action: #selector(self.filter(_:)))
         self.navigationItem.rightBarButtonItem = rightBarButton
         self.tabBarController?.tabBar.isHidden = true
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         let leftBarButton = UIBarButtonItem(title: "Game", style: .plain, target: self, action: nil)
         self.navigationItem.leftBarButtonItem = leftBarButton
+    }
+    
+    @objc func filter(_ sender: UIBarButtonItem) {
+        let nextView = FilterViewController()
+        let navigationController = UINavigationController.init(rootViewController: nextView)
+        navigationController.navigationBar.isTranslucent = false
+        self.present(navigationController, animated: true, completion: nil)
     }
     
     func loadInfo(){

@@ -22,6 +22,19 @@
 		EC2C5B5F20DB38C4003357D2 /* ImageDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2C5B5D20DB38C4003357D2 /* ImageDetailsViewController.xib */; };
 		EC2C5B6020DB38C4003357D2 /* ImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B5E20DB38C4003357D2 /* ImageDetailsViewController.swift */; };
 		EC2C5B6220DB5123003357D2 /* UINavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B6120DB5123003357D2 /* UINavigationBarExtension.swift */; };
+		EC2C5B6620DB690C003357D2 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B6420DB690C003357D2 /* FilterViewController.swift */; };
+		EC2C5B6720DB690C003357D2 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2C5B6520DB690C003357D2 /* FilterViewController.xib */; };
+		EC2C5B6C20DB6A0B003357D2 /* FilterHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B6A20DB6A0B003357D2 /* FilterHeader.swift */; };
+		EC2C5B6D20DB6A0B003357D2 /* FilterHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2C5B6B20DB6A0B003357D2 /* FilterHeader.xib */; };
+		EC2C5B7120DB6A25003357D2 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B6F20DB6A25003357D2 /* FilterTableViewCell.swift */; };
+		EC2C5B7220DB6A25003357D2 /* FilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2C5B7020DB6A25003357D2 /* FilterTableViewCell.xib */; };
+		EC2C5B7720DB6F1E003357D2 /* RatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B7520DB6F1E003357D2 /* RatingTableViewCell.swift */; };
+		EC2C5B7820DB6F1E003357D2 /* RatingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2C5B7620DB6F1E003357D2 /* RatingTableViewCell.xib */; };
+		EC2C5B7C20DB70ED003357D2 /* SortingByTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B7A20DB70ED003357D2 /* SortingByTableViewCell.swift */; };
+		EC2C5B7D20DB70ED003357D2 /* SortingByTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2C5B7B20DB70ED003357D2 /* SortingByTableViewCell.xib */; };
+		EC2C5B7F20DB78D4003357D2 /* UIcolor+KoombaGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B7E20DB78D4003357D2 /* UIcolor+KoombaGame.swift */; };
+		EC2C5B8320DB79DE003357D2 /* ApplyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C5B8120DB79DE003357D2 /* ApplyTableViewCell.swift */; };
+		EC2C5B8420DB79DE003357D2 /* ApplyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2C5B8220DB79DE003357D2 /* ApplyTableViewCell.xib */; };
 		EC8D1B6420D9EE8500E1305A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1B6320D9EE8500E1305A /* AppDelegate.swift */; };
 		EC8D1B6920D9EE8500E1305A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC8D1B6720D9EE8500E1305A /* Main.storyboard */; };
 		EC8D1B6C20D9EE8500E1305A /* KoombeaGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC8D1B6A20D9EE8500E1305A /* KoombeaGame.xcdatamodeld */; };
@@ -88,6 +101,19 @@
 		EC2C5B5D20DB38C4003357D2 /* ImageDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageDetailsViewController.xib; sourceTree = "<group>"; };
 		EC2C5B5E20DB38C4003357D2 /* ImageDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewController.swift; sourceTree = "<group>"; };
 		EC2C5B6120DB5123003357D2 /* UINavigationBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBarExtension.swift; sourceTree = "<group>"; };
+		EC2C5B6420DB690C003357D2 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		EC2C5B6520DB690C003357D2 /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
+		EC2C5B6A20DB6A0B003357D2 /* FilterHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeader.swift; sourceTree = "<group>"; };
+		EC2C5B6B20DB6A0B003357D2 /* FilterHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterHeader.xib; sourceTree = "<group>"; };
+		EC2C5B6F20DB6A25003357D2 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		EC2C5B7020DB6A25003357D2 /* FilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterTableViewCell.xib; sourceTree = "<group>"; };
+		EC2C5B7520DB6F1E003357D2 /* RatingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTableViewCell.swift; sourceTree = "<group>"; };
+		EC2C5B7620DB6F1E003357D2 /* RatingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingTableViewCell.xib; sourceTree = "<group>"; };
+		EC2C5B7A20DB70ED003357D2 /* SortingByTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingByTableViewCell.swift; sourceTree = "<group>"; };
+		EC2C5B7B20DB70ED003357D2 /* SortingByTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortingByTableViewCell.xib; sourceTree = "<group>"; };
+		EC2C5B7E20DB78D4003357D2 /* UIcolor+KoombaGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIcolor+KoombaGame.swift"; sourceTree = "<group>"; };
+		EC2C5B8120DB79DE003357D2 /* ApplyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyTableViewCell.swift; sourceTree = "<group>"; };
+		EC2C5B8220DB79DE003357D2 /* ApplyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplyTableViewCell.xib; sourceTree = "<group>"; };
 		EC8D1B6020D9EE8500E1305A /* KoombeaGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoombeaGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC8D1B6320D9EE8500E1305A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC8D1B6820D9EE8500E1305A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -153,6 +179,7 @@
 				EC2C5B6120DB5123003357D2 /* UINavigationBarExtension.swift */,
 				4DA3900020DAF77400AD85F8 /* NSNumberFormatter+Utils.swift */,
 				4D9349E220DA895B00484F5B /* ActivityIndicator.swift */,
+				EC2C5B7E20DB78D4003357D2 /* UIcolor+KoombaGame.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -245,6 +272,73 @@
 			path = ImageDetails;
 			sourceTree = "<group>";
 		};
+		EC2C5B6320DB68EB003357D2 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C5B6920DB69E9003357D2 /* Header */,
+				EC2C5B6820DB69D9003357D2 /* Cell */,
+				EC2C5B6420DB690C003357D2 /* FilterViewController.swift */,
+				EC2C5B6520DB690C003357D2 /* FilterViewController.xib */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		EC2C5B6820DB69D9003357D2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C5B8020DB79B6003357D2 /* Apply */,
+				EC2C5B7920DB70DC003357D2 /* SortingBy2 */,
+				EC2C5B7420DB6EF3003357D2 /* Rating */,
+				EC2C5B7320DB6EE2003357D2 /* SortingBy */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EC2C5B6920DB69E9003357D2 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C5B6A20DB6A0B003357D2 /* FilterHeader.swift */,
+				EC2C5B6B20DB6A0B003357D2 /* FilterHeader.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		EC2C5B7320DB6EE2003357D2 /* SortingBy */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C5B6F20DB6A25003357D2 /* FilterTableViewCell.swift */,
+				EC2C5B7020DB6A25003357D2 /* FilterTableViewCell.xib */,
+			);
+			path = SortingBy;
+			sourceTree = "<group>";
+		};
+		EC2C5B7420DB6EF3003357D2 /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C5B7520DB6F1E003357D2 /* RatingTableViewCell.swift */,
+				EC2C5B7620DB6F1E003357D2 /* RatingTableViewCell.xib */,
+			);
+			path = Rating;
+			sourceTree = "<group>";
+		};
+		EC2C5B7920DB70DC003357D2 /* SortingBy2 */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C5B7A20DB70ED003357D2 /* SortingByTableViewCell.swift */,
+				EC2C5B7B20DB70ED003357D2 /* SortingByTableViewCell.xib */,
+			);
+			path = SortingBy2;
+			sourceTree = "<group>";
+		};
+		EC2C5B8020DB79B6003357D2 /* Apply */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C5B8120DB79DE003357D2 /* ApplyTableViewCell.swift */,
+				EC2C5B8220DB79DE003357D2 /* ApplyTableViewCell.xib */,
+			);
+			path = Apply;
+			sourceTree = "<group>";
+		};
 		EC8D1B5720D9EE8500E1305A = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +425,7 @@
 		EC8D1B9920D9F0E700E1305A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EC2C5B6320DB68EB003357D2 /* Filter */,
 				4D9349F520DAE36100484F5B /* Detail */,
 				EC8D1BB520DA135500E1305A /* Dashboard */,
 				EC8D1B9B20D9F34000E1305A /* Walkthrough */,
@@ -513,10 +608,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC8D1BAE20D9F3CC00E1305A /* Walkthrough1ViewController.xib in Resources */,
+				EC2C5B7220DB6A25003357D2 /* FilterTableViewCell.xib in Resources */,
 				EC8D1BA520D9F38300E1305A /* Walkthrough2ViewController.xib in Resources */,
 				EC8D1BC320DA19A200E1305A /* DashboardCollectionViewCell2.xib in Resources */,
 				EC8D1BBF20DA198E00E1305A /* DashboardCollectionViewCell.xib in Resources */,
 				4D9349E820DA92A900484F5B /* Header.xib in Resources */,
+				EC2C5B7820DB6F1E003357D2 /* RatingTableViewCell.xib in Resources */,
+				EC2C5B7D20DB70ED003357D2 /* SortingByTableViewCell.xib in Resources */,
+				EC2C5B6D20DB6A0B003357D2 /* FilterHeader.xib in Resources */,
 				4D9349F420DA9C9800484F5B /* DashboardTableViewCell2.xib in Resources */,
 				EC8D1BAA20D9F39900E1305A /* Walkthrough3ViewController.xib in Resources */,
 				EC8D1BB920DA137800E1305A /* DashboardViewController.xib in Resources */,
@@ -525,7 +624,9 @@
 				4D9349F920DAE38A00484F5B /* DetailViewController.xib in Resources */,
 				EC8D1B9620D9F09A00E1305A /* Default-568h@2x.png in Resources */,
 				EC8D1B6E20D9EE8700E1305A /* Assets.xcassets in Resources */,
+				EC2C5B8420DB79DE003357D2 /* ApplyTableViewCell.xib in Resources */,
 				4D9349EF20DA9C7A00484F5B /* DashboardTableViewCell.xib in Resources */,
+				EC2C5B6720DB690C003357D2 /* FilterViewController.xib in Resources */,
 				EC8D1B6920D9EE8500E1305A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,20 +754,27 @@
 				EC2C5B6020DB38C4003357D2 /* ImageDetailsViewController.swift in Sources */,
 				4D9349F820DAE38A00484F5B /* DetailViewController.swift in Sources */,
 				EC8D1BBE20DA198E00E1305A /* DashboardCollectionViewCell.swift in Sources */,
+				EC2C5B7C20DB70ED003357D2 /* SortingByTableViewCell.swift in Sources */,
 				EC8D1B6420D9EE8500E1305A /* AppDelegate.swift in Sources */,
+				EC2C5B7F20DB78D4003357D2 /* UIcolor+KoombaGame.swift in Sources */,
 				EC8D1BB020DA088F00E1305A /* Game.swift in Sources */,
+				EC2C5B7720DB6F1E003357D2 /* RatingTableViewCell.swift in Sources */,
 				4D9349E320DA895B00484F5B /* ActivityIndicator.swift in Sources */,
 				4D9349F320DA9C9800484F5B /* DashboardTableViewCell2.swift in Sources */,
 				EC8D1BAD20D9F3CC00E1305A /* Walkthrough1ViewController.swift in Sources */,
 				EC2C5B6220DB5123003357D2 /* UINavigationBarExtension.swift in Sources */,
+				EC2C5B8320DB79DE003357D2 /* ApplyTableViewCell.swift in Sources */,
 				EC8D1BA420D9F38300E1305A /* Walkthrough2ViewController.swift in Sources */,
+				EC2C5B6C20DB6A0B003357D2 /* FilterHeader.swift in Sources */,
 				EC8D1BA920D9F39900E1305A /* Walkthrough3ViewController.swift in Sources */,
 				EC8D1B6C20D9EE8500E1305A /* KoombeaGame.xcdatamodeld in Sources */,
 				4D9349EE20DA9C7A00484F5B /* DashboardTableViewCell.swift in Sources */,
 				EC8D1BB820DA137800E1305A /* DashboardViewController.swift in Sources */,
+				EC2C5B6620DB690C003357D2 /* FilterViewController.swift in Sources */,
 				4D9349E720DA92A900484F5B /* Header.swift in Sources */,
 				EC8D1BB220DA0F1E00E1305A /* DataService.swift in Sources */,
 				EC8D1BC220DA19A200E1305A /* DashboardCollectionViewCell2.swift in Sources */,
+				EC2C5B7120DB6A25003357D2 /* FilterTableViewCell.swift in Sources */,
 				4DA3900120DAF77400AD85F8 /* NSNumberFormatter+Utils.swift in Sources */,
 				EC8D1BB420DA12B500E1305A /* Session.swift in Sources */,
 			);
